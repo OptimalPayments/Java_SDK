@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<servlet>
+		<servlet-name>hostedPaymentSimple</servlet-name>
+		<servlet-class>com.netbanx.websample.HostedPaymentSimpleServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>hostedPaymentSilent</servlet-name>
+		<servlet-class>com.netbanx.websample.HostedPaymentSilentServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>cardPaymentSimple</servlet-name>
+		<servlet-class>com.netbanx.websample.CardPaymentSimpleServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>cardPaymentWithCustomerVault</servlet-name>
+		<servlet-class>com.netbanx.websample.CardPaymentWithCustomerVaultServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	  <servlet-name>hostedPaymentSimple</servlet-name>
+	  <url-pattern>/hosted-payment-simple</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+	  <servlet-name>hostedPaymentSilent</servlet-name>
+	  <url-pattern>/hosted-payment-silent</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+	  <servlet-name>cardPaymentSimple</servlet-name>
+	  <url-pattern>/card-payment-simple</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+	  <servlet-name>cardPaymentWithCustomerVault</servlet-name>
+	  <url-pattern>/card-payment-w-customervault</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
