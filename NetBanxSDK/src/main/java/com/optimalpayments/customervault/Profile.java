@@ -63,6 +63,8 @@ public class Profile implements BaseDomainObject {
   private String paymentToken;
   private ArrayList<Address> addresses;
   private ArrayList<Card> cards;
+  @Expose
+  private Card card;
   private Error error;
 
   public final Id<Profile> getId() {
@@ -201,6 +203,14 @@ public class Profile implements BaseDomainObject {
     this.cards = cards;
   }
 
+  public final Card getCard() {
+    return card;
+  }
+
+  public final void setCard(final Card card) {
+    this.card = card;
+  }
+
   @Override
   public final Error getError() {
     return error;
@@ -213,7 +223,7 @@ public class Profile implements BaseDomainObject {
   /**
    * Get a profile builder.
    *
-   * @return AuthorizationBuilder
+   * @return ProfileBuilder
    */
   public static final ProfileBuilder builder() {
     return new ProfileBuilder();
@@ -226,16 +236,20 @@ public class Profile implements BaseDomainObject {
 
     private final Profile profile = new Profile();
     private DateOfBirth.DateOfBirthBuilder<ProfileBuilder> dateOfBirthBuilder;
+    private Card.CardBuilderSingleUse<ProfileBuilder> cardBuilderSingleUse;
 
     /**
-     * Build this authorization object.
+     * Build this Profile object.
      *
-     * @return Authorization
+     * @return Profile
      */
     @Override
     public final Profile build() {
       if (null != dateOfBirthBuilder) {
         profile.setDateOfBirth(dateOfBirthBuilder.build());
+      }
+      if (null != cardBuilderSingleUse) {
+        profile.setCard((cardBuilderSingleUse.build()));
       }
       return profile;
     }
@@ -316,6 +330,18 @@ public class Profile implements BaseDomainObject {
         dateOfBirthBuilder = new DateOfBirth.DateOfBirthBuilder<ProfileBuilder>(this);
       }
       return dateOfBirthBuilder;
+    }
+
+    /**
+     * Build a card within this profile.
+     *
+     * @return com.optimalpayments.cardpayments.Card.CardBuilder<ProfileBuilder>
+     */
+    public final Card.CardBuilderSingleUse<ProfileBuilder> card() {
+      if (null == cardBuilderSingleUse) {
+        cardBuilderSingleUse = new Card.CardBuilderSingleUse<ProfileBuilder>(this);
+      }
+      return cardBuilderSingleUse;
     }
 
     /**

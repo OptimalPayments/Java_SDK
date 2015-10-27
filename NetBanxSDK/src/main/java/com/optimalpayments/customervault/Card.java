@@ -25,6 +25,8 @@ import com.optimalpayments.common.Error;
 import com.optimalpayments.common.Id;
 import com.optimalpayments.common.impl.BaseBuilder;
 import com.optimalpayments.common.impl.BaseDomainObject;
+import com.optimalpayments.common.impl.GenericBuilder;
+import com.optimalpayments.common.impl.NestedBuilder;
 
 /**
  * The Class Card.
@@ -51,6 +53,8 @@ public class Card implements BaseDomainObject {
   private Boolean defaultCardIndicator;
   @Expose
   private String paymentToken;
+  @Expose
+  private String singleUseToken;
   private Error error;
   @Expose
   private Id<Profile> profileId;
@@ -157,6 +161,14 @@ public class Card implements BaseDomainObject {
 
   public final void setPaymentToken(final String paymentToken) {
     this.paymentToken = paymentToken;
+  }
+
+  public final String getSingleUseToken() {
+    return singleUseToken;
+  }
+
+  public final void setSingleUseToken(final String singleUseToken) {
+    this.singleUseToken = singleUseToken;
   }
 
   @Override
@@ -282,5 +294,34 @@ public class Card implements BaseDomainObject {
       card.setProfileId(profileId);
       return this;
     }
+  }
+
+  /**
+   * The builder class for Card.
+   */
+  public static class CardBuilderSingleUse<BLDRT extends GenericBuilder> extends
+          NestedBuilder<Card, BLDRT> {
+
+    private final Card card = new Card();
+
+    public CardBuilderSingleUse(BLDRT parent) {
+      super(parent);
+    }
+
+    @Override
+    public Card build() {
+      return card;
+    }
+
+    /**
+     *
+     * @param singleUseToken
+     * @return CardBuilderSingleUse
+     */
+    public final CardBuilderSingleUse<BLDRT> singleUseToken(final String singleUseToken) {
+      card.setSingleUseToken(singleUseToken);
+      return this;
+    }
+
   }
 }
