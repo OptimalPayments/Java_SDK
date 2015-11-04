@@ -21,13 +21,13 @@ package com.optimalpayments;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -232,7 +232,7 @@ public class OptimalApiClient {
     try {
       connection.setRequestProperty("Authorization", "Basic " + getAuthenticatedString());
       connection.setRequestMethod(request.getMethod().toString());
-      connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+      connection.setRequestProperty("Content-Type", "application/json;charset=utf-8");
 
       // Write to the stream if we can
       if (request.getMethod().equals(Request.RequestType.POST)
@@ -242,7 +242,7 @@ public class OptimalApiClient {
         final OutputStream os = connection.getOutputStream();
         final DataOutputStream dos = new DataOutputStream(os);
         try {
-          dos.writeBytes(serializeObject(request, returnType));
+          dos.write(serializeObject(request, returnType).getBytes(StandardCharsets.UTF_8));
           dos.flush();
         } finally {
           dos.close();
