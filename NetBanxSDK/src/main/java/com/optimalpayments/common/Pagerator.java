@@ -67,9 +67,10 @@ public abstract class Pagerator<T extends BaseDomainObject>
    * @param position
    * @return Boolean
    */
+
   protected final Boolean hasElementAfterPosition(final Integer position) {
-    return position < getResults().size() || null != getNextPageUrl();
-  }
+	    return position+1 < getResults().size() || null != getNextPageUrl();
+	  }
 
   /**
    * Used by iterator to ensure the requested position is loaded before returning it.
