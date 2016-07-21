@@ -1,4 +1,4 @@
-<%@ page import="com.optimalpayments.hostedpayment.Order,java.util.Calendar" %>
+<%@ page import="com.optimalpayments.hostedpayment.Order,java.util.Calendar, com.optimalpayments.hostedpayment.Rel" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,9 +9,9 @@
 
   	<% Order order = (Order) request.getAttribute("order");  %>
   	
-    <form method="post" action="<% out.print(order.getLinks().get("hosted_payment").getUri()); %>">
+    <form method="post" action="<% out.print(order.getLink(Rel.HOSTED_PAYMENT).getUri()); %>">
       <fieldset>
-        <legend>Card Details For Order ID: <% out.print(order.getId().getId()); %></legend>
+        <legend>Card Details For Order ID: <% out.print(order.getId()); %></legend>
         <div>
           <label>
             Card Number: 

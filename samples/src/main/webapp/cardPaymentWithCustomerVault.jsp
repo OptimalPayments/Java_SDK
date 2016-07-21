@@ -1,4 +1,4 @@
-<%@ page import="com.optimalpayments.common.Error,com.optimalpayments.common.Field,java.util.UUID,java.util.Calendar" %>
+<%@ page import="com.optimalpayments.common.Error,com.optimalpayments.common.FieldError,java.util.UUID,java.util.Calendar" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,8 +20,8 @@
         <% } %>
 		
 		<%
-          for (Object tmpObj : error.getfieldErrors()) {
-            Field field = (Field) tmpObj;
+          for (Object tmpObj : error.getFieldErrors()) {
+            FieldError field = (FieldError) tmpObj;
         %>
             <li><% out.print(field.getField() + " - " + field.getError()); %></li>
 

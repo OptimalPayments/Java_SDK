@@ -1,4 +1,4 @@
-<%@ page import="com.optimalpayments.cardpayments.AuthorizationId" %>
+<%@ page import="com.optimalpayments.cardpayments.Authorization" %>
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
 			<h2>Successfully completed payment.</h2>
 			
 			<% if (request.getAttribute("authId") != null ) { 
-				AuthorizationId authId = (AuthorizationId) request.getAttribute("authId");
+				Authorization authId = (Authorization) request.getAttribute("authId");
 			%>
 				<h3>AuthID: <% out.print(authId.getId()); %></h3>
 			<% } %>
