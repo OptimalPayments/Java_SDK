@@ -20,17 +20,25 @@ package com.optimalpayments.hostedpayment;
 
 import com.google.gson.annotations.SerializedName;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by Callback.
  */
 public enum Format {
 
+  /** The json. */
   @SerializedName("json")
   JSON,
+  
+  /** The get. */
   @SerializedName("get")
   GET,
+  
+  /** The form. */
   @SerializedName("form-urlencoded")
   FORM,
+  
+  /** The xml. */
   @SerializedName("xml")
   XML
 }

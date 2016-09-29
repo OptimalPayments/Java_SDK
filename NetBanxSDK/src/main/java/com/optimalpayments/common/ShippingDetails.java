@@ -26,38 +26,74 @@ import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class ShippingDetails.
  */
 public class ShippingDetails extends AddressContainer implements DomainObject {
 
+  /** The recipient name. */
   @Expose
   private String recipientName;
+  
+  /** The carrier. */
   @Expose
   private Carrier carrier;
+  
+  /** The ship method. */
   @Expose
   private ShipMethod shipMethod;
 
+  /**
+   * Gets the recipient name.
+   *
+   * @return the recipient name
+   */
   public final String getRecipientName() {
     return recipientName;
   }
 
+  /**
+   * Sets the recipient name.
+   *
+   * @param recipientName the new recipient name
+   */
   public final void setRecipientName(final String recipientName) {
     this.recipientName = recipientName;
   }
 
+  /**
+   * Gets the carrier.
+   *
+   * @return the carrier
+   */
   public final Carrier getCarrier() {
     return carrier;
   }
 
+  /**
+   * Sets the carrier.
+   *
+   * @param carrier the new carrier
+   */
   public final void setCarrier(final Carrier carrier) {
     this.carrier = carrier;
   }
 
+  /**
+   * Gets the ship method.
+   *
+   * @return the ship method
+   */
   public final ShipMethod getShipMethod() {
     return shipMethod;
   }
 
+  /**
+   * Sets the ship method.
+   *
+   * @param shipMethod the new ship method
+   */
   public final void setShipMethod(final ShipMethod shipMethod) {
     this.shipMethod = shipMethod;
   }
@@ -70,13 +106,27 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
   public static class ShippingDetailsBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<ShippingDetails, BLDRT> {
 
+    /** The shipping details. */
     private final ShippingDetails shippingDetails = new ShippingDetails();
+    
+    /** The address details. */
     private AddressDetails addressDetails = new AddressDetails();
 
+    /**
+     * Instantiates a new shipping details builder.
+     *
+     * @param parent the parent
+     */
     public ShippingDetailsBuilder(final BLDRT parent) {
       super(parent);
     }
 
+    /**
+     * Instantiates a new shipping details builder.
+     *
+     * @param parent the parent
+     * @param a the a
+     */
     public ShippingDetailsBuilder(
             final BLDRT parent,
             com.optimalpayments.customervault.Address a) {
@@ -101,7 +151,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the street property.
      *
-     * @param street
+     * @param street the street
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> street(final String street) {
@@ -112,7 +162,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the street2 property.
      *
-     * @param street2
+     * @param street2 the street2
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> street2(final String street2) {
@@ -123,7 +173,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the city property.
      *
-     * @param city
+     * @param city the city
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> city(final String city) {
@@ -134,7 +184,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the state property.
      *
-     * @param state
+     * @param state the state
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> state(final String state) {
@@ -145,7 +195,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the country property.
      *
-     * @param country
+     * @param country the country
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> country(final String country) {
@@ -156,7 +206,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the zip property.
      *
-     * @param zip
+     * @param zip the zip
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> zip(final String zip) {
@@ -167,7 +217,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the phone property.
      *
-     * @param phone
+     * @param phone the phone
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> phone(final String phone) {
@@ -178,7 +228,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the carrier property.
      *
-     * @param carrier
+     * @param carrier the carrier
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> carrier(final Carrier carrier) {
@@ -189,7 +239,7 @@ public class ShippingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the shipMethod property.
      *
-     * @param shipMethod
+     * @param shipMethod the ship method
      * @return ShippingDetailsBuilder< BLDRT >
      */
     public final ShippingDetailsBuilder<BLDRT> shipMethod(final ShipMethod shipMethod) {

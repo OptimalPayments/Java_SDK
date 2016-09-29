@@ -21,18 +21,30 @@ package com.optimalpayments.common.impl;
 import com.google.gson.annotations.Expose;
 import com.optimalpayments.common.AddressDetails;
 
+// TODO: Auto-generated Javadoc
 /**
  * AddressContainer used to serialize addressDetails within a node rather than as a sub node.
  */
 public abstract class AddressContainer {
 
+  /** The address details. */
   @Expose
   private AddressDetails addressDetails;
 
+  /**
+   * Gets the address details.
+   *
+   * @return the address details
+   */
   public final AddressDetails getAddressDetails() {
     return addressDetails;
   }
 
+  /**
+   * Sets the address details.
+   *
+   * @param addressDetails the new address details
+   */
   public final void setAddressDetails(final AddressDetails addressDetails) {
     this.addressDetails = addressDetails;
   }

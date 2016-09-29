@@ -27,76 +27,163 @@ import com.optimalpayments.common.impl.AddressContainer;
 import com.optimalpayments.common.impl.BaseBuilder;
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Address.
+ * used by create bank account
+ * @author manisha.rani
+ * @since   25-02-2016. 
  */
+ 
 public class Address extends AddressContainer implements BaseDomainObject {
 
+  /** The id. */
   private Id<Address> id;
+  
+  /** The nick name. */
   @Expose
   private String nickName;
+  
+  /** The status. */
+  @Expose
   private Status status;
+  
+  /** The recipient name. */
   @Expose
   private String recipientName;
+  
+  /** The default shipping address indicator. */
   private Boolean defaultShippingAddressIndicator;
+  
+  /** The error. */
   private Error error;
+  
+  /** The profile id. */
   @Expose
   private Id<Profile> profileId;
 
+  /**
+   * Gets the id.
+   *
+   * @return the id
+   */
   public final Id<Address> getId() {
     return id;
   }
 
+  /**
+   * Sets the id.
+   *
+   * @param id the new id
+   */
   public final void setId(final Id<Address> id) {
     this.id = id;
   }
 
+  /**
+   * Gets the nick name.
+   *
+   * @return the nick name
+   */
   public final String getNickName() {
     return nickName;
   }
 
+  /**
+   * Sets the nick name.
+   *
+   * @param nickName the new nick name
+   */
   public final void setNickName(final String nickName) {
     this.nickName = nickName;
   }
 
+  /**
+   * Gets the status.
+   *
+   * @return the status
+   */
   public final Status getStatus() {
     return status;
   }
 
+  /**
+   * Sets the status.
+   *
+   * @param status the new status
+   */
   public final void setStatus(final Status status) {
     this.status = status;
   }
 
+  /**
+   * Gets the recipient name.
+   *
+   * @return the recipient name
+   */
   public final String getRecipientName() {
     return recipientName;
   }
 
+  /**
+   * Sets the recipient name.
+   *
+   * @param recipientName the new recipient name
+   */
   public final void setRecipientName(final String recipientName) {
     this.recipientName = recipientName;
   }
 
+  /**
+   * Gets the default shipping address indicator.
+   *
+   * @return the default shipping address indicator
+   */
   public final Boolean getDefaultShippingAddressIndicator() {
     return defaultShippingAddressIndicator;
   }
 
+  /**
+   * Sets the default shipping address indicator.
+   *
+   * @param defaultShippingAddressIndicator the new default shipping address indicator
+   */
   public final void setDefaultShippingAddressIndicator(
           final Boolean defaultShippingAddressIndicator) {
     this.defaultShippingAddressIndicator = defaultShippingAddressIndicator;
   }
 
+  /* (non-Javadoc)
+   * @see com.optimalpayments.common.impl.BaseDomainObject#getError()
+   */
   @Override
   public final Error getError() {
     return error;
   }
 
+  /**
+   * Sets the error.
+   *
+   * @param error the new error
+   */
   public final void setError(final Error error) {
     this.error = error;
   }
 
+  /**
+   * Gets the profile id.
+   *
+   * @return the profile id
+   */
   public final Id<Profile> getProfileId() {
     return profileId;
   }
 
+  /**
+   * Sets the profile id.
+   *
+   * @param profileId the new profile id
+   */
   public final void setProfileId(final Id<Profile> profileId) {
     this.profileId = profileId;
   }
@@ -115,13 +202,16 @@ public class Address extends AddressContainer implements BaseDomainObject {
    */
   public static class AddressBuilder extends BaseBuilder<Address> {
 
+    /** The address. */
     private final Address address = new Address();
+    
+    /** The address details. */
     private final AddressDetails addressDetails = new AddressDetails();
 
     /**
-     * Build this authorization object.
+     * Build this Address object.
      *
-     * @return Authorization
+     * @return address
      */
     @Override
     public final Address build() {
@@ -132,7 +222,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the id property.
      *
-     * @param id
+     * @param id the id
      * @return AddressBuilder
      */
     public final AddressBuilder id(final Id<Address> id) {
@@ -143,7 +233,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the nickName property.
      *
-     * @param nickName
+     * @param nickName the nick name
      * @return AddressBuilder
      */
     public final AddressBuilder nickName(final String nickName) {
@@ -154,7 +244,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the status property.
      *
-     * @param status
+     * @param status the status
      * @return AddressBuilder
      */
     public final AddressBuilder status(final Status status) {
@@ -165,7 +255,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the street property.
      *
-     * @param street
+     * @param street the street
      * @return AddressBuilder
      */
     public final AddressBuilder street(final String street) {
@@ -176,7 +266,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the street2 property.
      *
-     * @param street2
+     * @param street2 the street2
      * @return AddressBuilder
      */
     public final AddressBuilder street2(final String street2) {
@@ -187,7 +277,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the city property.
      *
-     * @param city
+     * @param city the city
      * @return AddressBuilder
      */
     public final AddressBuilder city(final String city) {
@@ -198,7 +288,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the country property.
      *
-     * @param country
+     * @param country the country
      * @return AddressBuilder
      */
     public final AddressBuilder country(final String country) {
@@ -209,7 +299,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the state property.
      *
-     * @param state
+     * @param state the state
      * @return AddressBuilder
      */
     public final AddressBuilder state(final String state) {
@@ -220,7 +310,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the zip property.
      *
-     * @param zip
+     * @param zip the zip
      * @return AddressBuilder
      */
     public final AddressBuilder zip(final String zip) {
@@ -231,7 +321,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the recipientName property.
      *
-     * @param recipientName
+     * @param recipientName the recipient name
      * @return AddressBuilder
      */
     public final AddressBuilder recipientName(final String recipientName) {
@@ -242,7 +332,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the phone property.
      *
-     * @param phone
+     * @param phone the phone
      * @return AddressBuilder
      */
     public final AddressBuilder phone(final String phone) {
@@ -253,7 +343,7 @@ public class Address extends AddressContainer implements BaseDomainObject {
     /**
      * Set the profileId property.
      *
-     * @param profileId
+     * @param profileId the profile id
      * @return AddressBuilder
      */
     public final AddressBuilder profileId(final Id<Profile> profileId) {

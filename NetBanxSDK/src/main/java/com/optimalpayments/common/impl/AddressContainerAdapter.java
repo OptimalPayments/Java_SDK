@@ -33,15 +33,22 @@ import java.util.Map;
 import com.optimalpayments.common.AddressDetails;
 import com.optimalpayments.common.Id;
 
+// TODO: Auto-generated Javadoc
 /**
  * AddressContainerAdapter class used to properly serialize addressDetails node.
  */
 public class AddressContainerAdapter implements
         JsonSerializer<AddressContainer>, JsonDeserializer<AddressContainer> {
   
+  /** The gson serializer. */
   private final Gson gsonSerializer;
+  
+  /** The gson deserializer. */
   private final Gson gsonDeserializer;
   
+  /**
+   * Instantiates a new address container adapter.
+   */
   public AddressContainerAdapter() {
     final GsonBuilder gsonSerializerBuilder = new GsonBuilder();
     gsonSerializerBuilder.excludeFieldsWithoutExposeAnnotation();
@@ -63,10 +70,10 @@ public class AddressContainerAdapter implements
   /**
    * Serialize the object with all addressDetails properties within the base object.
    *
-   * @param addressContainer
-   * @param typeOfSrc
-   * @param context
-   * @return
+   * @param addressContainer the address container
+   * @param typeOfSrc the type of src
+   * @param context the context
+   * @return the json element
    */
   @Override
   public JsonElement serialize(
@@ -92,10 +99,10 @@ public class AddressContainerAdapter implements
   /**
    * Deserialize with all properties correctly set within the addressDetails node.
    *
-   * @param json
-   * @param typeOfT
-   * @param context
-   * @return
+   * @param json the json
+   * @param typeOfT the type of t
+   * @param context the context
+   * @return the address container
    */
   @Override
   public AddressContainer deserialize(

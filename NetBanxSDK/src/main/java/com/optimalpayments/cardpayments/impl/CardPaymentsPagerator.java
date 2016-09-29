@@ -24,16 +24,23 @@ import com.optimalpayments.common.Link;
 import com.optimalpayments.common.Pagerator;
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * CardPaymentsPagerator class will allow iteration of all results for a paged query.
  *
- * @param <T>
+ * @param <T> the generic type
  */
 public abstract class CardPaymentsPagerator<T extends BaseDomainObject> extends Pagerator<T> {
 
+  /** The links. */
   private ArrayList<Link> links = new ArrayList<Link>();
+  
+  /** The next url. */
   private String nextUrl;
 
+  /* (non-Javadoc)
+   * @see com.optimalpayments.common.Pagerator#getNextPageUrl()
+   */
   @Override
   protected final String getNextPageUrl() {
     if (null != links) {
@@ -48,6 +55,9 @@ public abstract class CardPaymentsPagerator<T extends BaseDomainObject> extends 
     return nextUrl;
   }
 
+  /* (non-Javadoc)
+   * @see com.optimalpayments.common.Pagerator#setNextPageUrl(java.lang.String)
+   */
   @Override
   protected final void setNextPageUrl(final String nextUrl) {
     this.nextUrl = nextUrl;

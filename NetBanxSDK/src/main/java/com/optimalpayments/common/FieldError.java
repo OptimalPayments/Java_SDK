@@ -20,26 +20,50 @@ package com.optimalpayments.common;
 
 import com.optimalpayments.common.impl.DomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class FieldError.
  */
 public class FieldError implements DomainObject {
 
+  /** The field. */
   private String field;
+  
+  /** The error. */
   private String error;
 
+  /**
+   * Gets the field.
+   *
+   * @return the field
+   */
   public String getField() {
     return field;
   }
 
+  /**
+   * Sets the field.
+   *
+   * @param field the new field
+   */
   public void setField(final String field) {
     this.field = field;
   }
 
+  /**
+   * Gets the error.
+   *
+   * @return the error
+   */
   public String getError() {
     return error;
   }
 
+  /**
+   * Sets the error.
+   *
+   * @param error the new error
+   */
   public void setError(final String error) {
     this.error = error;
   }

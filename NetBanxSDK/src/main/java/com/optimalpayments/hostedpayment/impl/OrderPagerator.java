@@ -22,11 +22,13 @@ import java.util.ArrayList;
 
 import com.optimalpayments.hostedpayment.Order;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used to iterate over pages of results.
  */
 public class OrderPagerator extends HostedPaymentPagerator<Order> {
   
+  /** The records. */
   private ArrayList<Order> records;
   
   /**

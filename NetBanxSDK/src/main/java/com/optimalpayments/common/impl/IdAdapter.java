@@ -31,17 +31,29 @@ import java.lang.reflect.Type;
 
 import com.optimalpayments.common.Id;
 
+// TODO: Auto-generated Javadoc
 /**
  * Type adapter for converting an Id to its serialized form.
  */
 public class IdAdapter implements JsonSerializer<Id<? extends BaseDomainObject>>,
         JsonDeserializer<Id<? extends BaseDomainObject>> {
   
+  /**
+   * Serialize.
+   *
+   * @param src the src
+   * @param typeOfSrc the type of src
+   * @param context the context
+   * @return the json element
+   */
   @Override
   public final JsonElement serialize(Id<?> src, Type typeOfSrc, JsonSerializationContext context) {
     return new JsonPrimitive(src.toString());
   }
 
+  /* (non-Javadoc)
+   * @see com.google.gson.JsonDeserializer#deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext)
+   */
   @Override
   public final Id<?> deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
           throws JsonParseException {

@@ -20,11 +20,23 @@ package com.optimalpayments.common;
 
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * Exception type thrown by any 400 error from the API.
  */
 public class InvalidRequestException extends OptimalException {
 
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
+   * Instantiates a new invalid request exception.
+   *
+   * @param obj the obj
+   * @param cause the cause
+   */
   public InvalidRequestException(final BaseDomainObject obj, final Throwable cause) {
     super(obj, cause);
   }

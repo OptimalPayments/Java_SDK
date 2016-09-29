@@ -22,11 +22,13 @@ import java.util.ArrayList;
 
 import com.optimalpayments.cardpayments.Authorization;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used to iterate over pages of results.
  */
 public class AuthorizationPagerator extends CardPaymentsPagerator<Authorization> {
   
+  /** The auths. */
   private ArrayList<Authorization> auths;
   
   /**

@@ -24,48 +24,96 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class ShoppingCartItem.
  */
 public class ShoppingCartItem implements DomainObject {
 
+  /** The amount. */
   @Expose
   private Integer amount;
+  
+  /** The description. */
   @Expose
   private String description;
+  
+  /** The sku. */
   @Expose
   private String sku;
+  
+  /** The quantity. */
   @Expose
   private Integer quantity;
 
+  /**
+   * Gets the amount.
+   *
+   * @return the amount
+   */
   public final Integer getAmount() {
     return amount;
   }
 
+  /**
+   * Sets the amount.
+   *
+   * @param amount the new amount
+   */
   public final void setAmount(final Integer amount) {
     this.amount = amount;
   }
 
+  /**
+   * Gets the description.
+   *
+   * @return the description
+   */
   public final String getDescription() {
     return description;
   }
 
+  /**
+   * Sets the description.
+   *
+   * @param description the new description
+   */
   public final void setDescription(final String description) {
     this.description = description;
   }
 
+  /**
+   * Gets the sku.
+   *
+   * @return the sku
+   */
   public final String getSku() {
     return sku;
   }
 
+  /**
+   * Sets the sku.
+   *
+   * @param sku the new sku
+   */
   public final void setSku(final String sku) {
     this.sku = sku;
   }
 
+  /**
+   * Gets the quantity.
+   *
+   * @return the quantity
+   */
   public final Integer getQuantity() {
     return quantity;
   }
 
+  /**
+   * Sets the quantity.
+   *
+   * @param quantity the new quantity
+   */
   public final void setQuantity(final Integer quantity) {
     this.quantity = quantity;
   }
@@ -78,8 +126,14 @@ public class ShoppingCartItem implements DomainObject {
   public static class ShoppingCartItemBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<ShoppingCartItem, BLDRT> {
     
+    /** The shopping cart item. */
     private final ShoppingCartItem shoppingCartItem = new ShoppingCartItem();
 
+    /**
+     * Instantiates a new shopping cart item builder.
+     *
+     * @param parent the parent
+     */
     public ShoppingCartItemBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -97,7 +151,7 @@ public class ShoppingCartItem implements DomainObject {
     /**
      * Set the amount property.
      *
-     * @param amount
+     * @param amount the amount
      * @return ShoppingCartItemBuilder< BLDRT >
      */
     public final ShoppingCartItemBuilder<BLDRT> amount(final Integer amount) {
@@ -108,7 +162,7 @@ public class ShoppingCartItem implements DomainObject {
     /**
      * Set the description property.
      *
-     * @param description
+     * @param description the description
      * @return ShoppingCartItemBuilder< BLDRT >
      */
     public final ShoppingCartItemBuilder<BLDRT> description(final String description) {
@@ -119,7 +173,7 @@ public class ShoppingCartItem implements DomainObject {
     /**
      * Set the sku property.
      *
-     * @param sku
+     * @param sku the sku
      * @return ShoppingCartItemBuilder< BLDRT >
      */
     public final ShoppingCartItemBuilder<BLDRT> sku(final String sku) {
@@ -130,7 +184,7 @@ public class ShoppingCartItem implements DomainObject {
     /**
      * Set the quantity property.
      *
-     * @param quantity
+     * @param quantity the quantity
      * @return ShoppingCartItemBuilder< BLDRT >
      */
     public final ShoppingCartItemBuilder<BLDRT> quantity(final Integer quantity) {

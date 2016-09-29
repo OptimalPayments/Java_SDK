@@ -20,24 +20,50 @@ package com.optimalpayments.common;
 
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * All internal exceptions extend or implement this type.
  */
 public class OptimalException extends Exception {
 
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/** The raw response. */
   private final BaseDomainObject rawResponse;
+  
+  /** The code. */
   private final String code;
 
+  /**
+   * Instantiates a new optimal exception.
+   *
+   * @param message the message
+   */
   public OptimalException(final String message) {
     this(message, null);
   }
 
+  /**
+   * Instantiates a new optimal exception.
+   *
+   * @param message the message
+   * @param cause the cause
+   */
   public OptimalException(final String message, final Throwable cause) {
     super(message, cause);
     rawResponse = null;
     code = null;
   }
 
+  /**
+   * Instantiates a new optimal exception.
+   *
+   * @param obj the obj
+   * @param cause the cause
+   */
   public OptimalException(final BaseDomainObject obj, final Throwable cause) {
     super(null == obj || null == obj.getError()
             ? "An unknown error has occurred"
@@ -50,10 +76,20 @@ public class OptimalException extends Exception {
 
   }
 
+  /**
+   * Gets the raw response.
+   *
+   * @return the raw response
+   */
   public final BaseDomainObject getRawResponse() {
     return rawResponse;
   }
 
+  /**
+   * Gets the code.
+   *
+   * @return the code
+   */
   public final String getCode() {
     return code;
   }

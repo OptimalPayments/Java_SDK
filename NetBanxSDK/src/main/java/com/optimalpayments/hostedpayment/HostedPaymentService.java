@@ -29,6 +29,7 @@ import com.optimalpayments.common.impl.Request;
 import com.optimalpayments.hostedpayment.impl.OrderPagerator;
 import com.optimalpayments.hostedpayment.impl.OrderRebillSerializer;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class HostedPaymentService.
  */
@@ -43,10 +44,20 @@ public class HostedPaymentService {
    * The paths to different features in the API.
    */
   private static final String URI = "hosted/v1";
+  
+  /** The Constant ORDER_PATH. */
   private static final String ORDER_PATH = "/orders";
+  
+  /** The Constant RESEND_CALLBACK. */
   private static final String RESEND_CALLBACK = "/resend_callback";
+  
+  /** The Constant REFUND_PATH. */
   private static final String REFUND_PATH = "/refund";
+  
+  /** The Constant SETTLEMENT_PATH. */
   private static final String SETTLEMENT_PATH = "/settlement";
+  
+  /** The Constant URI_SEPARATOR. */
   private static final String URI_SEPARATOR = "/";
 
   /**
@@ -61,10 +72,10 @@ public class HostedPaymentService {
   /**
    * Create an Order.
    *
-   * @param order
+   * @param order the order
    * @return Order
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Order process(final Order order) throws IOException, OptimalException {
 
@@ -80,10 +91,10 @@ public class HostedPaymentService {
   /**
    * Get an order by id.
    *
-   * @param id
+   * @param id the id
    * @return Order
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Order status(final Id<Order> id) throws IOException, OptimalException {
 
@@ -97,11 +108,11 @@ public class HostedPaymentService {
 
   /**
    * Cancel an order by id.
-   * 
-   * @param id
-   * @return
-   * @throws IOException
-   * @throws OptimalException 
+   *
+   * @param id the id
+   * @return the order
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Order cancel(final Id<Order> id) throws IOException, OptimalException {
 
@@ -116,10 +127,10 @@ public class HostedPaymentService {
   /**
    * Cancel held order by id.
    *
-   * @param id
+   * @param id the id
    * @return Order
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Order cancelHeldOrder(final Id<Order> id) throws IOException, OptimalException {
     
@@ -140,10 +151,10 @@ public class HostedPaymentService {
   /**
    * Approve held order by id.
    *
-   * @param id
+   * @param id the id
    * @return Order
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Order approveHeldOrder(final Id<Order> id) throws IOException, OptimalException {
 
@@ -164,10 +175,10 @@ public class HostedPaymentService {
   /**
    * Resend order callback by id.
    *
-   * @param id
+   * @param id the id
    * @return boolean
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final boolean resendCallback(final Id<Order> id) throws IOException, OptimalException {
 
@@ -184,10 +195,10 @@ public class HostedPaymentService {
   /**
    * Refund an order.
    *
-   * @param refund
+   * @param refund the refund
    * @return Refund
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Refund refund(final Refund refund) throws IOException, OptimalException {
 
@@ -203,10 +214,10 @@ public class HostedPaymentService {
   /**
    * Settle an order.
    *
-   * @param settlement
+   * @param settlement the settlement
    * @return Settlement
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Settlement settlement(Settlement settlement) throws IOException, OptimalException {
 
@@ -223,10 +234,10 @@ public class HostedPaymentService {
   /**
    * Rebill an existing order.
    *
-   * @param order
+   * @param order the order
    * @return Order
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Order processRebill(Order order) throws IOException, OptimalException {
     if (null == order.getId()) {
@@ -255,10 +266,10 @@ public class HostedPaymentService {
   /**
    * Update a rebilled order.
    *
-   * @param order
+   * @param order the order
    * @return Order
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Order updateRebill(final Order order) throws IOException, OptimalException {
 
@@ -276,8 +287,8 @@ public class HostedPaymentService {
    * Get a report of recent orders.
    *
    * @return Pagerator< Order >
-   * @throws OptimalException
-   * @throws IOException
+   * @throws OptimalException the optimal exception
+   * @throws IOException Signals that an I/O exception has occurred.
    */
   public final Pagerator<Order> orders() throws OptimalException, IOException {
     return orders(0);
@@ -286,10 +297,10 @@ public class HostedPaymentService {
   /**
    * Get a report of recent orders.
    *
-   * @param count
+   * @param count the count
    * @return Pagerator< Order >
-   * @throws OptimalException
-   * @throws IOException
+   * @throws OptimalException the optimal exception
+   * @throws IOException Signals that an I/O exception has occurred.
    */
   public final Pagerator<Order> orders(final Integer count)
           throws OptimalException, IOException {
@@ -318,7 +329,7 @@ public class HostedPaymentService {
    *
    * @param path the path
    * @return the string
-   * @throws OptimalException
+   * @throws OptimalException the optimal exception
    */
   private String prepareUri(final String path) throws OptimalException {
     return URI + path;

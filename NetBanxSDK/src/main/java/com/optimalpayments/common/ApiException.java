@@ -20,11 +20,23 @@ package com.optimalpayments.common;
 
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * Exception type thrown by any 406, 415 or 500+ error from the API.
  */
 public class ApiException extends OptimalException {
 
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
+   * Instantiates a new api exception.
+   *
+   * @param obj the obj
+   * @param cause the cause
+   */
   public ApiException(final BaseDomainObject obj, final Throwable cause) {
     super(obj, cause);
   }

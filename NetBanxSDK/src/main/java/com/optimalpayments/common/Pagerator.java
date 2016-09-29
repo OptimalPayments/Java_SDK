@@ -26,6 +26,7 @@ import com.optimalpayments.OptimalApiClient;
 import com.optimalpayments.common.impl.BaseDomainObject;
 import com.optimalpayments.common.impl.Request;
 
+// TODO: Auto-generated Javadoc
 /**
  * Extend this class to allow iteration of a paged data set.
  *
@@ -41,8 +42,8 @@ public abstract class Pagerator<T extends BaseDomainObject>
 
   /**
    * Set the client.
-   * 
-   * @param client 
+   *
+   * @param client the new client
    */
   public final void setClient(final OptimalApiClient client) {
     this.client = client;
@@ -52,7 +53,7 @@ public abstract class Pagerator<T extends BaseDomainObject>
    * Get the OptimalApiClient.
    *
    * @return OptimalApiClient
-   * @throws OptimalException
+   * @throws OptimalException the optimal exception
    */
   private OptimalApiClient getClient() throws OptimalException {
     if (null == client) {
@@ -63,8 +64,8 @@ public abstract class Pagerator<T extends BaseDomainObject>
 
   /**
    * Used by iterator to ensure that there is a next element.
-   * 
-   * @param position
+   *
+   * @param position the position
    * @return Boolean
    */
 
@@ -74,7 +75,8 @@ public abstract class Pagerator<T extends BaseDomainObject>
 
   /**
    * Used by iterator to ensure the requested position is loaded before returning it.
-   * @param position 
+   *
+   * @param position the position
    */
   protected final void ensurePositionLoaded(final Integer position) {
     if (position >= getResults().size()) {
@@ -107,7 +109,8 @@ public abstract class Pagerator<T extends BaseDomainObject>
 
   /**
    * Used by the iterator to get a specific element.
-   * @param index
+   *
+   * @param index the index
    * @return T
    */
   protected final T get(final int index) {
@@ -151,7 +154,7 @@ public abstract class Pagerator<T extends BaseDomainObject>
   /**
    * Set the next page url.
    *
-   * @param nextUrl
+   * @param nextUrl the new next page url
    */
   protected abstract void setNextPageUrl(String nextUrl);
 
@@ -160,13 +163,20 @@ public abstract class Pagerator<T extends BaseDomainObject>
    *
    * @param <T> the type to be returned by iterator
    */
-  public class PageratorIterator<T extends BaseDomainObject> implements ListIterator<T> {
+  @SuppressWarnings("hiding")
+public class PageratorIterator<T extends BaseDomainObject> implements ListIterator<T> {
 
+    /**
+     * Instantiates a new pagerator iterator.
+     *
+     * @param parent the parent
+     */
     public PageratorIterator(final Pagerator<T> parent) {
       this.parent = parent;
       position = -1;
     }
 
+    /** The parent. */
     private final Pagerator<T> parent;
     /**
      * Tracks the current position in the result set.
@@ -183,10 +193,19 @@ public abstract class Pagerator<T extends BaseDomainObject>
       return parent.hasElementAfterPosition(position);
     }
 
+    /**
+     * Gets the.
+     *
+     * @param index the index
+     * @return the t
+     */
     protected final T get(final int index) {
       return parent.get(index);
     }
 
+    /* (non-Javadoc)
+     * @see java.util.ListIterator#next()
+     */
     @Override
     public final T next() {
       if (!hasNext()) {
@@ -256,7 +275,7 @@ public abstract class Pagerator<T extends BaseDomainObject>
     /**
      * Implementation for ListIterator.
      *
-     * @param unused
+     * @param unused the unused
      */
     @Override
     public final void set(final T unused) {
@@ -266,7 +285,7 @@ public abstract class Pagerator<T extends BaseDomainObject>
     /**
      * Implementation for ListIterator.
      *
-     * @param unused
+     * @param unused the unused
      */
     @Override
     public final void add(final T unused) {

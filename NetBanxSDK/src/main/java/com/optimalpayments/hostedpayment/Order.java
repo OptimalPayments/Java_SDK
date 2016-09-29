@@ -29,177 +29,382 @@ import com.optimalpayments.common.ShippingDetails;
 import com.optimalpayments.common.impl.BaseBuilder;
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Order.
  */
 public class Order implements BaseDomainObject {
 
+  /** The id. */
   private Id<Order> id;
+  
+  /** The merchant ref num. */
   @Expose
   private String merchantRefNum;
+  
+  /** The currency code. */
   @Expose
   private String currencyCode;
+  
+  /** The total amount. */
   @Expose
   private Integer totalAmount;
+  
+  /** The customer ip. */
   @Expose
   private String customerIp;
+  
+  /** The customer notification email. */
   @Expose
   private String customerNotificationEmail;
+  
+  /** The merchant notification email. */
   @Expose
   private String merchantNotificationEmail;
+  
+  /** The due date. */
   @Expose
   private String dueDate;
+  
+  /** The profile. */
   @Expose
   private HostedPaymentProfile profile;
+  
+  /** The shopping cart. */
   @Expose
   private ArrayList<ShoppingCartItem> shoppingCart;
+  
+  /** The ancillary fees. */
   @Expose
   private ArrayList<AncillaryFee> ancillaryFees;
+  
+  /** The billing details. */
   @Expose
   private BillingDetails billingDetails;
+  
+  /** The shipping details. */
   @Expose
   private ShippingDetails shippingDetails;
+  
+  /** The callback. */
   @Expose
   private ArrayList<Callback> callback;
+  
+  /** The redirect. */
   @Expose
   private ArrayList<Redirect> redirect;
+  
+  /** The link. */
   @Expose
   private ArrayList<Link> link;
+  
+  /** The mode. */
   private String mode;
+  
+  /** The type. */
   private String type;
+  
+  /** The payment method. */
   @Expose
   private ArrayList<String> paymentMethod;
+  
+  /** The addendum data. */
   @Expose
   private ArrayList<KeyValuePair> addendumData;
+  
+  /** The locale. */
   @Expose
   private Locale locale;
+  
+  /** The extended options. */
   @Expose
   private ArrayList<KeyValuePair> extendedOptions;
+  
+  /** The associated transactions. */
   private ArrayList<Transaction> associatedTransactions;
+  
+  /** The transaction. */
   @Expose
   private Transaction transaction;
+  
+  /** The error. */
   private Error error;
 
+  /**
+   * Gets the id.
+   *
+   * @return the id
+   */
   public final Id<Order> getId() {
     return id;
   }
 
+  /**
+   * Sets the id.
+   *
+   * @param id the new id
+   */
   public final void setId(final Id<Order> id) {
     this.id = id;
   }
 
+  /**
+   * Gets the merchant ref num.
+   *
+   * @return the merchant ref num
+   */
   public final String getMerchantRefNum() {
     return merchantRefNum;
   }
 
+  /**
+   * Sets the merchant ref num.
+   *
+   * @param merchantRefNum the new merchant ref num
+   */
   public final void setMerchantRefNum(final String merchantRefNum) {
     this.merchantRefNum = merchantRefNum;
   }
 
+  /**
+   * Gets the currency code.
+   *
+   * @return the currency code
+   */
   public final String getCurrencyCode() {
     return currencyCode;
   }
 
+  /**
+   * Sets the currency code.
+   *
+   * @param currencyCode the new currency code
+   */
   public final void setCurrencyCode(final String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
+  /**
+   * Gets the total amount.
+   *
+   * @return the total amount
+   */
   public final Integer getTotalAmount() {
     return totalAmount;
   }
 
+  /**
+   * Sets the total amount.
+   *
+   * @param totalAmount the new total amount
+   */
   public final void setTotalAmount(final Integer totalAmount) {
     this.totalAmount = totalAmount;
   }
 
+  /**
+   * Gets the customer ip.
+   *
+   * @return the customer ip
+   */
   public final String getCustomerIp() {
     return customerIp;
   }
 
+  /**
+   * Sets the customer ip.
+   *
+   * @param customerIp the new customer ip
+   */
   public final void setCustomerIp(final String customerIp) {
     this.customerIp = customerIp;
   }
 
+  /**
+   * Gets the customer notification email.
+   *
+   * @return the customer notification email
+   */
   public final String getCustomerNotificationEmail() {
     return customerNotificationEmail;
   }
 
+  /**
+   * Sets the customer notification email.
+   *
+   * @param customerNotificationEmail the new customer notification email
+   */
   public final void setCustomerNotificationEmail(final String customerNotificationEmail) {
     this.customerNotificationEmail = customerNotificationEmail;
   }
 
+  /**
+   * Gets the merchant notification email.
+   *
+   * @return the merchant notification email
+   */
   public final String getMerchantNotificationEmail() {
     return merchantNotificationEmail;
   }
 
+  /**
+   * Sets the merchant notification email.
+   *
+   * @param merchantNotificationEmail the new merchant notification email
+   */
   public final void setMerchantNotificationEmail(final String merchantNotificationEmail) {
     this.merchantNotificationEmail = merchantNotificationEmail;
   }
 
+  /**
+   * Gets the due date.
+   *
+   * @return the due date
+   */
   public final String getDueDate() {
     return dueDate;
   }
 
+  /**
+   * Sets the due date.
+   *
+   * @param dueDate the new due date
+   */
   public final void setDueDate(final String dueDate) {
     this.dueDate = dueDate;
   }
 
+  /**
+   * Gets the profile.
+   *
+   * @return the profile
+   */
   public final HostedPaymentProfile getProfile() {
     return profile;
   }
 
+  /**
+   * Sets the profile.
+   *
+   * @param profile the new profile
+   */
   public final void setProfile(final HostedPaymentProfile profile) {
     this.profile = profile;
   }
 
+  /**
+   * Gets the shopping cart.
+   *
+   * @return the shopping cart
+   */
   public final ArrayList<ShoppingCartItem> getShoppingCart() {
     return shoppingCart;
   }
 
+  /**
+   * Sets the shopping cart.
+   *
+   * @param shoppingCart the new shopping cart
+   */
   public final void setShoppingCart(final ArrayList<ShoppingCartItem> shoppingCart) {
     this.shoppingCart = shoppingCart;
   }
 
+  /**
+   * Gets the ancillary fees.
+   *
+   * @return the ancillary fees
+   */
   public final ArrayList<AncillaryFee> getAncillaryFees() {
     return ancillaryFees;
   }
 
+  /**
+   * Sets the ancillary fees.
+   *
+   * @param ancillaryFees the new ancillary fees
+   */
   public final void setAncillaryFees(final ArrayList<AncillaryFee> ancillaryFees) {
     this.ancillaryFees = ancillaryFees;
   }
 
+  /**
+   * Gets the billing details.
+   *
+   * @return the billing details
+   */
   public final BillingDetails getBillingDetails() {
     return billingDetails;
   }
 
+  /**
+   * Sets the billing details.
+   *
+   * @param billingDetails the new billing details
+   */
   public final void setBillingDetails(final BillingDetails billingDetails) {
     this.billingDetails = billingDetails;
   }
 
+  /**
+   * Gets the shipping details.
+   *
+   * @return the shipping details
+   */
   public final ShippingDetails getShippingDetails() {
     return shippingDetails;
   }
 
+  /**
+   * Sets the shipping details.
+   *
+   * @param shippingDetails the new shipping details
+   */
   public final void setShippingDetails(final ShippingDetails shippingDetails) {
     this.shippingDetails = shippingDetails;
   }
 
+  /**
+   * Gets the callback.
+   *
+   * @return the callback
+   */
   public final ArrayList<Callback> getCallback() {
     return callback;
   }
 
+  /**
+   * Sets the callback.
+   *
+   * @param callback the new callback
+   */
   public final void setCallback(final ArrayList<Callback> callback) {
     this.callback = callback;
   }
 
+  /**
+   * Gets the redirect.
+   *
+   * @return the redirect
+   */
   public final ArrayList<Redirect> getRedirect() {
     return redirect;
   }
 
+  /**
+   * Sets the redirect.
+   *
+   * @param redirect the new redirect
+   */
   public final void setRedirect(final ArrayList<Redirect> redirect) {
     this.redirect = redirect;
   }
 
+  /**
+   * Gets the link.
+   *
+   * @return the link
+   */
   public final ArrayList<Link> getLink() {
     return link;
   }
@@ -207,9 +412,9 @@ public class Order implements BaseDomainObject {
   /**
    * Get a link by rel from the link array.
    *
-   * @param rel
+   * @param rel the rel
    * @return Link
-   * @throws OptimalException
+   * @throws OptimalException the optimal exception
    */
   public final Link getLink(final Rel rel) throws OptimalException {
     if (null != getLink()) {
@@ -222,79 +427,172 @@ public class Order implements BaseDomainObject {
     throw new OptimalException("Link " + rel.toString() + " not found in order.");
   }
 
+  /**
+   * Sets the link.
+   *
+   * @param link the new link
+   */
   public final void setLink(final ArrayList<Link> link) {
     this.link = link;
   }
 
+  /**
+   * Gets the mode.
+   *
+   * @return the mode
+   */
   public final String getMode() {
     return mode;
   }
 
+  /**
+   * Sets the mode.
+   *
+   * @param mode the new mode
+   */
   public final void setMode(final String mode) {
     this.mode = mode;
   }
 
+  /**
+   * Gets the type.
+   *
+   * @return the type
+   */
   public final String getType() {
     return type;
   }
 
+  /**
+   * Sets the type.
+   *
+   * @param type the new type
+   */
   public final void setType(final String type) {
     this.type = type;
   }
 
+  /**
+   * Gets the payment method.
+   *
+   * @return the payment method
+   */
   public final ArrayList<String> getPaymentMethod() {
     return paymentMethod;
   }
 
+  /**
+   * Sets the payment method.
+   *
+   * @param paymentMethod the new payment method
+   */
   public final void setPaymentMethod(final ArrayList<String> paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
+  /**
+   * Gets the addendum data.
+   *
+   * @return the addendum data
+   */
   public final ArrayList<KeyValuePair> getAddendumData() {
     return addendumData;
   }
 
+  /**
+   * Sets the addendum data.
+   *
+   * @param addendumData the new addendum data
+   */
   public final void setAddendumData(final ArrayList<KeyValuePair> addendumData) {
     this.addendumData = addendumData;
   }
 
+  /**
+   * Gets the locale.
+   *
+   * @return the locale
+   */
   public final Locale getLocale() {
     return locale;
   }
 
+  /**
+   * Sets the locale.
+   *
+   * @param locale the new locale
+   */
   public final void setLocale(final Locale locale) {
     this.locale = locale;
   }
 
+  /**
+   * Gets the extended options.
+   *
+   * @return the extended options
+   */
   public final ArrayList<KeyValuePair> getExtendedOptions() {
     return extendedOptions;
   }
 
+  /**
+   * Sets the extended options.
+   *
+   * @param extendedOptions the new extended options
+   */
   public final void setExtendedOptions(final ArrayList<KeyValuePair> extendedOptions) {
     this.extendedOptions = extendedOptions;
   }
 
+  /**
+   * Gets the associated transactions.
+   *
+   * @return the associated transactions
+   */
   public final ArrayList<Transaction> getAssociatedTransactions() {
     return associatedTransactions;
   }
 
+  /**
+   * Sets the associated transactions.
+   *
+   * @param associatedTransactions the new associated transactions
+   */
   public final void setAssociatedTransactions(final ArrayList<Transaction> associatedTransactions) {
     this.associatedTransactions = associatedTransactions;
   }
 
+  /**
+   * Gets the transaction.
+   *
+   * @return the transaction
+   */
   public final Transaction getTransaction() {
     return transaction;
   }
 
+  /**
+   * Sets the transaction.
+   *
+   * @param transaction the new transaction
+   */
   public final void setTransaction(final Transaction transaction) {
     this.transaction = transaction;
   }
 
+  /* (non-Javadoc)
+   * @see com.optimalpayments.common.impl.BaseDomainObject#getError()
+   */
   @Override
   public final Error getError() {
     return error;
   }
 
+  /**
+   * Sets the error.
+   *
+   * @param error the new error
+   */
   public final void setError(final Error error) {
     this.error = error;
   }
@@ -313,23 +611,44 @@ public class Order implements BaseDomainObject {
    */
   public static class OrderBuilder extends BaseBuilder<Order> {
 
+    /** The order. */
     private final Order order = new Order();
+    
+    /** The profile builder. */
     private HostedPaymentProfile.ProfileBuilder<OrderBuilder> profileBuilder;
+    
+    /** The billing details builder. */
     private BillingDetails.BillingDetailsBuilder<OrderBuilder> billingDetailsBuilder;
+    
+    /** The shipping details builder. */
     private ShippingDetails.ShippingDetailsBuilder<OrderBuilder> shippingDetailsBuilder;
+    
+    /** The shopping cart builders. */
     private final ArrayList<
             ShoppingCartItem.ShoppingCartItemBuilder<OrderBuilder>> shoppingCartBuilders
             = new ArrayList<ShoppingCartItem.ShoppingCartItemBuilder<OrderBuilder>>();
+    
+    /** The ancillery fee builders. */
     private final ArrayList<AncillaryFee.AncillaryFeeBuilder<OrderBuilder>> ancilleryFeeBuilders
             = new ArrayList<AncillaryFee.AncillaryFeeBuilder<OrderBuilder>>();
+    
+    /** The callback builders. */
     private final ArrayList<Callback.CallbackBuilder<OrderBuilder>> callbackBuilders
             = new ArrayList<Callback.CallbackBuilder<OrderBuilder>>();
+    
+    /** The redirect builders. */
     private final ArrayList<Redirect.RedirectBuilder<OrderBuilder>> redirectBuilders
             = new ArrayList<Redirect.RedirectBuilder<OrderBuilder>>();
+    
+    /** The link builders. */
     private final ArrayList<Link.LinkBuilder<OrderBuilder>> linkBuilders
             = new ArrayList<Link.LinkBuilder<OrderBuilder>>();
+    
+    /** The addendum data builders. */
     private final ArrayList<KeyValuePair.KeyValuePairBuilder<OrderBuilder>> addendumDataBuilders
             = new ArrayList<KeyValuePair.KeyValuePairBuilder<OrderBuilder>>();
+    
+    /** The extended options builders. */
     private final ArrayList<KeyValuePair.KeyValuePairBuilder<OrderBuilder>> extendedOptionsBuilders
             = new ArrayList<KeyValuePair.KeyValuePairBuilder<OrderBuilder>>();
 
@@ -404,7 +723,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the id property.
      *
-     * @param id
+     * @param id the id
      * @return OrderBuilder
      */
     public final OrderBuilder id(final Id<Order> id) {
@@ -415,7 +734,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the merchantRefNum property.
      *
-     * @param merchantRefNum
+     * @param merchantRefNum the merchant ref num
      * @return OrderBuilder
      */
     public final OrderBuilder merchantRefNum(final String merchantRefNum) {
@@ -426,7 +745,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the currencyCode property.
      *
-     * @param currencyCode
+     * @param currencyCode the currency code
      * @return OrderBuilder
      */
     public final OrderBuilder currencyCode(final String currencyCode) {
@@ -437,7 +756,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the totalAmount property.
      *
-     * @param totalAmount
+     * @param totalAmount the total amount
      * @return OrderBuilder
      */
     public final OrderBuilder totalAmount(final Integer totalAmount) {
@@ -448,7 +767,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the customerIp property.
      *
-     * @param customerIp
+     * @param customerIp the customer ip
      * @return OrderBuilder
      */
     public final OrderBuilder customerIp(final String customerIp) {
@@ -459,7 +778,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the customerNotificationEmail property.
      *
-     * @param customerNotificationEmail
+     * @param customerNotificationEmail the customer notification email
      * @return OrderBuilder
      */
     public final OrderBuilder customerNotificationEmail(final String customerNotificationEmail) {
@@ -470,7 +789,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the merchantNotificationEmail property.
      *
-     * @param merchantNotificationEmail
+     * @param merchantNotificationEmail the merchant notification email
      * @return OrderBuilder
      */
     public final OrderBuilder merchantNotificationEmail(final String merchantNotificationEmail) {
@@ -481,7 +800,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the dueDate property.
      *
-     * @param dueDate
+     * @param dueDate the due date
      * @return OrderBuilder
      */
     public final OrderBuilder dueDate(final String dueDate) {
@@ -503,8 +822,8 @@ public class Order implements BaseDomainObject {
     
     /**
      * Add details from a customer vault profile to this Profile object.
-     * 
-     * @param p
+     *
+     * @param p the p
      * @return VerificationBuilder
      */
     public final OrderBuilder profile(
@@ -552,8 +871,8 @@ public class Order implements BaseDomainObject {
     
     /**
      * Add details from a customer vault address to this BillingDetails object.
-     * 
-     * @param a
+     *
+     * @param a the a
      * @return OrderBuilder
      */
     public final OrderBuilder billingDetails(
@@ -577,8 +896,8 @@ public class Order implements BaseDomainObject {
     
     /**
      * Add details from a customer vault address to this ShippingDetails object.
-     * 
-     * @param a
+     *
+     * @param a the a
      * @return OrderBuilder
      */
     public final OrderBuilder shippingDetails(
@@ -626,7 +945,7 @@ public class Order implements BaseDomainObject {
     /**
      * Add a paymentMethod to this order.
      *
-     * @param paymentMethod
+     * @param paymentMethod the payment method
      * @return OrderBuilder
      */
     public final OrderBuilder addPaymentMethod(final String paymentMethod) {
@@ -654,7 +973,7 @@ public class Order implements BaseDomainObject {
     /**
      * Set the locale property.
      *
-     * @param locale
+     * @param locale the locale
      * @return OrderBuilder
      */
     public final OrderBuilder locale(final Locale locale) {

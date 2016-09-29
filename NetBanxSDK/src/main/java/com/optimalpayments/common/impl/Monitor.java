@@ -20,18 +20,30 @@ package com.optimalpayments.common.impl;
 
 import com.optimalpayments.common.Error;
 
+// TODO: Auto-generated Javadoc
 /**
  * Class used by monitor methods to check the api status.
  */
 public class Monitor implements BaseDomainObject {
 
+  /** The status. */
   private String status;
+  
+  /** The error. */
   private Error error;
 
+  /**
+   * Gets the status.
+   *
+   * @return the status
+   */
   public String getStatus() {
     return status;
   }
 
+  /* (non-Javadoc)
+   * @see com.optimalpayments.common.impl.BaseDomainObject#getError()
+   */
   @Override
   public Error getError() {
     return error;

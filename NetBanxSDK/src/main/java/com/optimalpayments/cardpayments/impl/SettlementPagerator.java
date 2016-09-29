@@ -22,11 +22,13 @@ import java.util.ArrayList;
 
 import com.optimalpayments.cardpayments.Settlement;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used to iterate over pages of results.
  */
 public class SettlementPagerator extends CardPaymentsPagerator<Settlement> {
   
+  /** The settlements. */
   private ArrayList<Settlement> settlements;
   
   /**

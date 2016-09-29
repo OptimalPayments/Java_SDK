@@ -21,20 +21,28 @@ package com.optimalpayments.hostedpayment.impl;
 import com.optimalpayments.common.Pagerator;
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * HostedPaymentPagerator class will allow iteration of all results for a paged query.
  *
- * @param <T>
+ * @param <T> the generic type
  */
 public abstract class HostedPaymentPagerator<T extends BaseDomainObject> extends Pagerator<T> {
   
+  /** The navigation. */
   private final Navigation navigation = new Navigation();
 
+  /* (non-Javadoc)
+   * @see com.optimalpayments.common.Pagerator#getNextPageUrl()
+   */
   @Override
   protected final String getNextPageUrl() {
     return navigation.next;
   }
 
+  /* (non-Javadoc)
+   * @see com.optimalpayments.common.Pagerator#setNextPageUrl(java.lang.String)
+   */
   @Override
   protected final void setNextPageUrl(final String nextUrl) {
     navigation.next = nextUrl;
@@ -44,6 +52,8 @@ public abstract class HostedPaymentPagerator<T extends BaseDomainObject> extends
    * Class used internally.
    */
   private class Navigation {
+    
+    /** The next. */
     private String next = null;
   }
 }

@@ -20,7 +20,6 @@ package com.optimalpayments.cardpayments;
 
 import java.io.IOException;
 import java.util.HashMap;
-
 import com.optimalpayments.OptimalApiClient;
 import com.optimalpayments.cardpayments.impl.AuthorizationPagerator;
 import com.optimalpayments.cardpayments.impl.AuthorizationReversalPagerator;
@@ -33,6 +32,7 @@ import com.optimalpayments.common.Pagerator;
 import com.optimalpayments.common.impl.Monitor;
 import com.optimalpayments.common.impl.Request;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class CardPaymentsService.
  */
@@ -47,16 +47,35 @@ public class CardPaymentsService {
    * The paths to different features in the API.
    */
   private static final String URI = "cardpayments/v1";
+  
+  /** The Constant AUTH_PATH. */
   private static final String AUTH_PATH = "/auths/";
+  
+  /** The Constant AUTH_REVERSAL_PATH. */
   private static final String AUTH_REVERSAL_PATH = "/voidauths/";
+  
+  /** The Constant SETTLEMENT_PATH. */
   private static final String SETTLEMENT_PATH = "/settlements/";
+  
+  /** The Constant REFUND_PATH. */
   private static final String REFUND_PATH = "/refunds/";
+  
+  /** The Constant VERIFY_PATH. */
   private static final String VERIFY_PATH = "/verifications/";
 
+  /** The Constant MERCHANT_REF_NUM. */
   private static final String MERCHANT_REF_NUM = "merchantRefNum";
+  
+  /** The Constant LIMIT. */
   private static final String LIMIT = "limit";
+  
+  /** The Constant OFFSET. */
   private static final String OFFSET = "offset";
+  
+  /** The Constant START_DATE. */
   private static final String START_DATE = "startDate";
+  
+  /** The Constant END_DATE. */
   private static final String END_DATE = "endDate";
 
   /**
@@ -72,8 +91,8 @@ public class CardPaymentsService {
    * Monitor.
    *
    * @return true, if successful
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final boolean monitor() throws IOException, OptimalException {
 
@@ -90,8 +109,8 @@ public class CardPaymentsService {
    *
    * @param auth the authorization
    * @return the authorization
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Authorization authorize(final Authorization auth)
           throws IOException, OptimalException {
@@ -109,10 +128,10 @@ public class CardPaymentsService {
    * Approve held authorization.
    *
    * @param <T> Authorization
-   * @param id
+   * @param id the id
    * @return Authorization
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final <T extends Authorization> Authorization approveHeldAuth(final Id<T> id)
           throws IOException, OptimalException {
@@ -132,10 +151,10 @@ public class CardPaymentsService {
   /**
    * Cancel held authorization.
    *
-   * @param id
+   * @param id the id
    * @return Authorization
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Authorization cancelHeldAuth(final Id<Authorization> id)
           throws IOException, OptimalException {
@@ -155,10 +174,10 @@ public class CardPaymentsService {
   /**
    * Reverse an authorization.
    *
-   * @param authReversal
+   * @param authReversal the auth reversal
    * @return AuthorizationReversal
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final AuthorizationReversal reverseAuth(final AuthorizationReversal authReversal)
           throws IOException,
@@ -177,10 +196,10 @@ public class CardPaymentsService {
   /**
    * Settle an authorization.
    *
-   * @param settlement
+   * @param settlement the settlement
    * @return Settlement
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Settlement settlement(final Settlement settlement)
           throws IOException, OptimalException {
@@ -197,10 +216,10 @@ public class CardPaymentsService {
   /**
    * Cancel a settlement.
    *
-   * @param id
+   * @param id the id
    * @return Settlement
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Settlement cancelSettlement(final Id<Settlement> id)
           throws IOException, OptimalException {
@@ -220,10 +239,10 @@ public class CardPaymentsService {
   /**
    * Refund a settlement.
    *
-   * @param refund
+   * @param refund the refund
    * @return Refund
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Refund refund(final Refund refund) throws IOException, OptimalException {
 
@@ -239,10 +258,10 @@ public class CardPaymentsService {
   /**
    * Cancel a refund.
    *
-   * @param id
+   * @param id the id
    * @return Refund
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Refund cancelRefund(final Id<Refund> id) 
           throws IOException, OptimalException {
@@ -262,10 +281,10 @@ public class CardPaymentsService {
   /**
    * Verify a card.
    *
-   * @param verify
+   * @param verify the verify
    * @return Verification
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Verification verify(final Verification verify) throws IOException, OptimalException {
 
@@ -281,10 +300,10 @@ public class CardPaymentsService {
   /**
    * Get an authorization by id.
    *
-   * @param id
+   * @param id the id
    * @return Authorization
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Authorization getAuth(final Id<Authorization> id)
           throws IOException, OptimalException {
@@ -301,9 +320,8 @@ public class CardPaymentsService {
    * Get matching authorizations.
    *
    * @return Pagerator< Authorization >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Authorization> getAuths()
           throws IOException, OptimalException {
@@ -313,11 +331,10 @@ public class CardPaymentsService {
   /**
    * Get matching authorizations.
    *
-   * @param auth
+   * @param auth the auth
    * @return Pagerator< Authorization >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Authorization> getAuths(final Authorization auth)
           throws IOException, OptimalException {
@@ -327,11 +344,11 @@ public class CardPaymentsService {
   /**
    * Get matching authorizations.
    *
-   * @param auth
-   * @param filter
+   * @param auth the auth
+   * @param filter the filter
    * @return Pagerator< Authorization >
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Authorization> getAuths(final Authorization auth, final Filter filter)
           throws IOException, OptimalException {
@@ -372,10 +389,10 @@ public class CardPaymentsService {
   /**
    * Get an auth reversal by id.
    *
-   * @param id
+   * @param id the id
    * @return AuthorizationReversal
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final AuthorizationReversal getAuthReversal(
           final Id<AuthorizationReversal> id) throws IOException, OptimalException {
@@ -392,9 +409,8 @@ public class CardPaymentsService {
    * Get matching authorization reversals.
    *
    * @return Pagerator< AuthorizationReversal >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<AuthorizationReversal> getAuthReversals()
           throws IOException, OptimalException {
@@ -404,11 +420,10 @@ public class CardPaymentsService {
   /**
    * Get matching authorization reversals.
    *
-   * @param authReversal
+   * @param authReversal the auth reversal
    * @return Pagerator< AuthorizationReversal >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<AuthorizationReversal>
           getAuthReversals(final AuthorizationReversal authReversal)
@@ -419,11 +434,11 @@ public class CardPaymentsService {
   /**
    * Get matching authorization reversals.
    *
-   * @param authReversal
-   * @param filter
+   * @param authReversal the auth reversal
+   * @param filter the filter
    * @return Pagerator< AuthorizationReversal >
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<AuthorizationReversal>
           getAuthReversals(final AuthorizationReversal authReversal, final Filter filter)
@@ -465,10 +480,10 @@ public class CardPaymentsService {
   /**
    * Get an settlement by id.
    *
-   * @param id
+   * @param id the id
    * @return Settlement
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Settlement getSettlement(final Id<Settlement> id)
           throws IOException, OptimalException {
@@ -485,9 +500,8 @@ public class CardPaymentsService {
    * Get matching settlements.
    *
    * @return Pagerator< Settlement >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Settlement> getSettlements()
           throws IOException, OptimalException {
@@ -497,11 +511,10 @@ public class CardPaymentsService {
   /**
    * Get matching settlements.
    *
-   * @param settlement
+   * @param settlement the settlement
    * @return Pagerator< Settlement >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Settlement> getSettlements(final Settlement settlement)
           throws IOException, OptimalException {
@@ -511,11 +524,11 @@ public class CardPaymentsService {
   /**
    * Get matching settlements.
    *
-   * @param settlement
-   * @param filter
+   * @param settlement the settlement
+   * @param filter the filter
    * @return Pagerator< Settlement >
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Settlement>
           getSettlements(final Settlement settlement, final Filter filter)
@@ -557,10 +570,10 @@ public class CardPaymentsService {
   /**
    * Get an refund by id.
    *
-   * @param id
+   * @param id the id
    * @return Refund
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Refund getRefund(final Id<Refund> id) throws IOException, OptimalException {
     
@@ -576,9 +589,8 @@ public class CardPaymentsService {
    * Get matching refunds.
    *
    * @return Pagerator< Refund >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Refund> getRefunds()
           throws IOException, OptimalException {
@@ -588,11 +600,10 @@ public class CardPaymentsService {
   /**
    * Get matching refunds.
    *
-   * @param refund
+   * @param refund the refund
    * @return Pagerator< Refund >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Refund> getRefunds(final Refund refund)
           throws IOException, OptimalException {
@@ -602,11 +613,11 @@ public class CardPaymentsService {
   /**
    * Get matching refunds.
    *
-   * @param refund
-   * @param filter
+   * @param refund the refund
+   * @param filter the filter
    * @return Pagerator< Refund >
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Refund>
           getRefunds(final Refund refund, final Filter filter)
@@ -648,10 +659,10 @@ public class CardPaymentsService {
   /**
    * Get an verification by id.
    *
-   * @param id
+   * @param id the id
    * @return Verification
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Verification getVerification(final Id<Verification> id)
           throws IOException, OptimalException {
@@ -668,9 +679,8 @@ public class CardPaymentsService {
    * Get matching verifications.
    *
    * @return Pagerator< Verification >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Verification> getVerifications()
           throws IOException, OptimalException {
@@ -680,11 +690,10 @@ public class CardPaymentsService {
   /**
    * Get matching verifications.
    *
-   * @param verification
+   * @param verification the verification
    * @return Pagerator< Verification >
-   * @throws IOException
-   * @throws OptimalException
-   *
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Verification> getVerifications(final Verification verification)
           throws IOException, OptimalException {
@@ -694,11 +703,11 @@ public class CardPaymentsService {
   /**
    * Get matching verifications.
    *
-   * @param verification
-   * @param filter
+   * @param verification the verification
+   * @param filter the filter
    * @return Pagerator< Verification >
-   * @throws IOException
-   * @throws OptimalException
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final Pagerator<Verification>
           getVerifications(final Verification verification, final Filter filter)
@@ -742,7 +751,7 @@ public class CardPaymentsService {
    *
    * @param path the path
    * @return the string
-   * @throws OptimalException
+   * @throws OptimalException the optimal exception
    */
   private String prepareUri(final String path) throws OptimalException {
     if (null == client.getAccount()) {

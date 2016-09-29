@@ -24,28 +24,52 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class AncillaryFee.
  */
 public class AncillaryFee implements DomainObject {
 
+  /** The amount. */
   @Expose
   private Integer amount;
+  
+  /** The description. */
   @Expose
   private String description;
 
+  /**
+   * Gets the amount.
+   *
+   * @return the amount
+   */
   public final Integer getAmount() {
     return amount;
   }
 
+  /**
+   * Sets the amount.
+   *
+   * @param amount the new amount
+   */
   public final void setAmount(final Integer amount) {
     this.amount = amount;
   }
 
+  /**
+   * Gets the description.
+   *
+   * @return the description
+   */
   public final String getDescription() {
     return description;
   }
 
+  /**
+   * Sets the description.
+   *
+   * @param description the new description
+   */
   public final void setDescription(final String description) {
     this.description = description;
   }
@@ -58,8 +82,14 @@ public class AncillaryFee implements DomainObject {
   public static class AncillaryFeeBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<AncillaryFee, BLDRT> {
 
+    /** The ancillary fee. */
     private final AncillaryFee ancillaryFee = new AncillaryFee();
 
+    /**
+     * Instantiates a new ancillary fee builder.
+     *
+     * @param parent the parent
+     */
     public AncillaryFeeBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -77,7 +107,7 @@ public class AncillaryFee implements DomainObject {
     /**
      * Set the amount property.
      *
-     * @param amount
+     * @param amount the amount
      * @return AncillaryFeeBuilder< BLDRT >
      */
     public final AncillaryFeeBuilder<BLDRT> amount(final Integer amount) {
@@ -88,7 +118,7 @@ public class AncillaryFee implements DomainObject {
     /**
      * Set the description property.
      *
-     * @param description
+     * @param description the description
      * @return AncillaryFeeBuilder< BLDRT >
      */
     public final AncillaryFeeBuilder<BLDRT> description(final String description) {

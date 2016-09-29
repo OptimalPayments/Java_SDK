@@ -18,6 +18,7 @@
  */
 package com.optimalpayments.common.impl;
 
+// TODO: Auto-generated Javadoc
 /**
  * This class will be extended for any builders nested within another builder. done() will return
  * the parent builder
@@ -29,12 +30,23 @@ public abstract class NestedBuilder<
         RTNT extends DomainObject, BLDRT extends GenericBuilder>
         extends BaseBuilder<RTNT> {
 
+  /** The parent. */
   protected BLDRT parent;
 
+  /**
+   * Done.
+   *
+   * @return the bldrt
+   */
   public final BLDRT done() {
     return parent;
   }
 
+  /**
+   * Instantiates a new nested builder.
+   *
+   * @param parent the parent
+   */
   public NestedBuilder(final BLDRT parent) {
     this.parent = parent;
   }

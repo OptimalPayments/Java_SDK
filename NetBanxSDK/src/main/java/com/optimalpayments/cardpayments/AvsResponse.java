@@ -18,15 +18,27 @@
  */
 package com.optimalpayments.cardpayments;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by Authorization and Verification.
  */
 public enum AvsResponse {
 
+  /** The match. */
   MATCH,
+  
+  /** The match address only. */
   MATCH_ADDRESS_ONLY,
+  
+  /** The match zip only. */
   MATCH_ZIP_ONLY,
+  
+  /** The no match. */
   NO_MATCH,
+  
+  /** The not processed. */
   NOT_PROCESSED,
+  
+  /** The unknown. */
   UNKNOWN
 }

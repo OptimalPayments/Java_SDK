@@ -18,11 +18,40 @@
  */
 package com.optimalpayments.customervault;
 
+// TODO: Auto-generated Javadoc
 /**
- * Status used by Profile, Card, Address.
+ * The Class Status
+ * Status used by Profile, Card, Address & All bank accounts.
  */
 public enum Status {
 
+  /** The initial. */
   INITIAL,
-  ACTIVE
+  
+  /** The active. */
+  ACTIVE,
+  
+  /** The pending. */
+  PENDING,
+  
+  /** The declined. */
+  DECLINED,
+  
+  /** The batched. */
+  BATCHED,
+  
+  /** The cancelled. */
+  CANCELLED,
+  
+  /** The rejected. */
+  REJECTED,
+  
+  /** The disputed. */
+  DISPUTED,
+  
+  /** The inactive. */
+  INACTIVE,
+  
+  /** The Completed. */
+  COMPLETED
 }

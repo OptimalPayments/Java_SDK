@@ -22,11 +22,13 @@ import java.util.ArrayList;
 
 import com.optimalpayments.cardpayments.AuthorizationReversal;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used to iterate over pages of results.
  */
 public class AuthorizationReversalPagerator extends CardPaymentsPagerator<AuthorizationReversal> {
   
+  /** The void auths. */
   private ArrayList<AuthorizationReversal> voidAuths;
   
   /**

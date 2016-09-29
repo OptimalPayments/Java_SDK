@@ -20,17 +20,25 @@ package com.optimalpayments.common;
 
 import com.google.gson.annotations.SerializedName;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by ShippingDetails.
  */
 public enum ShipMethod {
 
+  /** The lowest cost. */
   @SerializedName("C")
   LOWEST_COST,
+  
+  /** The next day. */
   @SerializedName("N")
   NEXT_DAY,
+  
+  /** The other. */
   @SerializedName("O")
   OTHER,
+  
+  /** The two day. */
   @SerializedName("T")
   TWO_DAY
 }

@@ -18,6 +18,7 @@
  */
 package com.optimalpayments.common;
 
+import com.google.gson.annotations.Expose;
 import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
@@ -27,8 +28,11 @@ import com.optimalpayments.common.impl.NestedBuilder;
  */
 public class DateOfBirth implements DomainObject {
 
+  @Expose	
   private Integer day;
+  @Expose
   private Integer month;
+  @Expose
   private Integer year;
 
   public final Integer getDay() {

@@ -20,26 +20,50 @@ package com.optimalpayments.common;
 
 import com.optimalpayments.common.impl.DomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Link.
  */
 public class Link implements DomainObject {
 
+  /** The rel. */
   private String rel;
+  
+  /** The href. */
   private String href;
 
+  /**
+   * Gets the rel.
+   *
+   * @return the rel
+   */
   public final String getRel() {
     return rel;
   }
 
+  /**
+   * Sets the rel.
+   *
+   * @param rel the new rel
+   */
   public final void setRel(final String rel) {
     this.rel = rel;
   }
 
+  /**
+   * Gets the href.
+   *
+   * @return the href
+   */
   public final String getHref() {
     return href;
   }
 
+  /**
+   * Sets the href.
+   *
+   * @param href the new href
+   */
   public final void setHref(final String href) {
     this.href = href;
   }

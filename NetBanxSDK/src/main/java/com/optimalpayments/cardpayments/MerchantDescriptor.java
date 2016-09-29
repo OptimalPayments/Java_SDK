@@ -22,26 +22,50 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class MerchantDescriptor.
  */
 public class MerchantDescriptor implements DomainObject {
 
+  /** The dynamic descriptor. */
   private String dynamicDescriptor;
+  
+  /** The phone. */
   private String phone;
 
+  /**
+   * Gets the dynamic descriptor.
+   *
+   * @return the dynamic descriptor
+   */
   public final String getDynamicDescriptor() {
     return dynamicDescriptor;
   }
 
+  /**
+   * Sets the dynamic descriptor.
+   *
+   * @param dynamicDescriptor the new dynamic descriptor
+   */
   public final void setDynamicDescriptor(final String dynamicDescriptor) {
     this.dynamicDescriptor = dynamicDescriptor;
   }
 
+  /**
+   * Gets the phone.
+   *
+   * @return the phone
+   */
   public final String getPhone() {
     return phone;
   }
 
+  /**
+   * Sets the phone.
+   *
+   * @param phone the new phone
+   */
   public final void setPhone(final String phone) {
     this.phone = phone;
   }
@@ -55,8 +79,14 @@ public class MerchantDescriptor implements DomainObject {
           BLDRT extends GenericBuilder> extends
           NestedBuilder<MerchantDescriptor, BLDRT> {
 
+    /** The merchant descriptor. */
     private final MerchantDescriptor merchantDescriptor = new MerchantDescriptor();
 
+    /**
+     * Instantiates a new merchant descriptor builder.
+     *
+     * @param parent the parent
+     */
     public MerchantDescriptorBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -74,7 +104,7 @@ public class MerchantDescriptor implements DomainObject {
     /**
      * Set the dynamicDescriptor property.
      *
-     * @param dynamicDescriptor
+     * @param dynamicDescriptor the dynamic descriptor
      * @return MerchantDescriptorBuilder< BLDRT >
      */
     public final MerchantDescriptorBuilder<BLDRT> dynamicDescriptor(
@@ -86,7 +116,7 @@ public class MerchantDescriptor implements DomainObject {
     /**
      * Set the phone property.
      *
-     * @param phone
+     * @param phone the phone
      * @return MerchantDescriptorBuilder< BLDRT >
      */
     public final MerchantDescriptorBuilder<BLDRT> phone(final String phone) {

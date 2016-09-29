@@ -24,38 +24,74 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Profile.
  */
 public class Profile implements DomainObject {
 
+  /** The first name. */
   @Expose
   private String firstName;
+  
+  /** The last name. */
   @Expose
   private String lastName;
+  
+  /** The email. */
   @Expose
   private String email;
 
+  /**
+   * Gets the first name.
+   *
+   * @return the first name
+   */
   public final String getFirstName() {
     return firstName;
   }
 
+  /**
+   * Sets the first name.
+   *
+   * @param firstName the new first name
+   */
   public final void setFirstName(final String firstName) {
     this.firstName = firstName;
   }
 
+  /**
+   * Gets the last name.
+   *
+   * @return the last name
+   */
   public final String getLastName() {
     return lastName;
   }
 
+  /**
+   * Sets the last name.
+   *
+   * @param lastName the new last name
+   */
   public final void setLastName(final String lastName) {
     this.lastName = lastName;
   }
 
+  /**
+   * Gets the email.
+   *
+   * @return the email
+   */
   public final String getEmail() {
     return email;
   }
 
+  /**
+   * Sets the email.
+   *
+   * @param email the new email
+   */
   public final void setEmail(final String email) {
     this.email = email;
   }
@@ -68,12 +104,24 @@ public class Profile implements DomainObject {
   public static class ProfileBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<Profile, BLDRT> {
 
+    /** The profile. */
     private final Profile profile = new Profile();
 
+    /**
+     * Instantiates a new profile builder.
+     *
+     * @param parent the parent
+     */
     public ProfileBuilder(final BLDRT parent) {
       super(parent);
     }
     
+    /**
+     * Instantiates a new profile builder.
+     *
+     * @param parent the parent
+     * @param p the p
+     */
     public ProfileBuilder(final BLDRT parent, com.optimalpayments.customervault.Profile p) {
       super(parent);
       profile.setEmail(p.getEmail());
@@ -94,7 +142,7 @@ public class Profile implements DomainObject {
     /**
      * Set the firstName property.
      *
-     * @param firstName
+     * @param firstName the first name
      * @return ProfileBuilder< BLDRT >
      */
     public final ProfileBuilder<BLDRT> firstName(final String firstName) {
@@ -105,7 +153,7 @@ public class Profile implements DomainObject {
     /**
      * Set the lastName property.
      *
-     * @param lastName
+     * @param lastName the last name
      * @return ProfileBuilder< BLDRT >
      */
     public final ProfileBuilder<BLDRT> lastName(final String lastName) {
@@ -116,7 +164,7 @@ public class Profile implements DomainObject {
     /**
      * Set the email property.
      *
-     * @param email
+     * @param email the email
      * @return ProfileBuilder< BLDRT >
      */
     public final ProfileBuilder<BLDRT> email(final String email) {

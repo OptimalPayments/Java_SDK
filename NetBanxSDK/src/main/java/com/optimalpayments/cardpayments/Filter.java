@@ -18,44 +18,92 @@
  */
 package com.optimalpayments.cardpayments;
 
+// TODO: Auto-generated Javadoc
 /**
  * Filter class to be used by lookup queries.
  */
 public class Filter {
 
+  /** The limit. */
   private Integer limit;
+  
+  /** The offset. */
   private Integer offset;
+  
+  /** The start date. */
   private String startDate;
+  
+  /** The end date. */
   private String endDate;
   
+  /**
+   * Gets the limit.
+   *
+   * @return the limit
+   */
   public Integer getLimit() {
     return limit;
   }
   
+  /**
+   * Sets the limit.
+   *
+   * @param limit the new limit
+   */
   public void setLimit(Integer limit) {
     this.limit = limit;
   }
   
+  /**
+   * Gets the offset.
+   *
+   * @return the offset
+   */
   public Integer getOffset() {
     return offset;
   }
   
+  /**
+   * Sets the offset.
+   *
+   * @param offset the new offset
+   */
   public void setOffset(Integer offset) {
     this.offset = offset;
   }
   
+  /**
+   * Gets the start date.
+   *
+   * @return the start date
+   */
   public String getStartDate() {
     return startDate;
   }
   
+  /**
+   * Sets the start date.
+   *
+   * @param startDate the new start date
+   */
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
   
+  /**
+   * Gets the end date.
+   *
+   * @return the end date
+   */
   public String getEndDate() {
     return endDate;
   }
   
+  /**
+   * Sets the end date.
+   *
+   * @param endDate the new end date
+   */
   public void setEndDate(String endDate) {
     this.endDate = endDate;
   }

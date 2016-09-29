@@ -24,28 +24,52 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class KeyValuePair.
  */
 public class KeyValuePair implements DomainObject {
 
+  /** The key. */
   @Expose
   private String key;
+  
+  /** The value. */
   @Expose
   private String value;
 
+  /**
+   * Gets the key.
+   *
+   * @return the key
+   */
   public final String getKey() {
     return key;
   }
 
+  /**
+   * Sets the key.
+   *
+   * @param key the new key
+   */
   public final void setKey(final String key) {
     this.key = key;
   }
 
+  /**
+   * Gets the value.
+   *
+   * @return the value
+   */
   public final String getValue() {
     return value;
   }
 
+  /**
+   * Sets the value.
+   *
+   * @param value the new value
+   */
   public final void setValue(final String value) {
     this.value = value;
   }
@@ -58,8 +82,14 @@ public class KeyValuePair implements DomainObject {
   public static class KeyValuePairBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<KeyValuePair, BLDRT> {
 
+    /** The key value pair. */
     private final KeyValuePair keyValuePair = new KeyValuePair();
 
+    /**
+     * Instantiates a new key value pair builder.
+     *
+     * @param parent the parent
+     */
     public KeyValuePairBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -77,7 +107,7 @@ public class KeyValuePair implements DomainObject {
     /**
      * Set the key property.
      *
-     * @param key
+     * @param key the key
      * @return KeyValuePairBuilder< BLDRT >
      */
     public final KeyValuePairBuilder<BLDRT> key(final String key) {
@@ -88,7 +118,7 @@ public class KeyValuePair implements DomainObject {
     /**
      * Set the value property.
      *
-     * @param value
+     * @param value the value
      * @return KeyValuePairBuilder< BLDRT >
      */
     public final KeyValuePairBuilder<BLDRT> value(final String value) {
@@ -99,7 +129,7 @@ public class KeyValuePair implements DomainObject {
     /**
      * Set the value property.
      *
-     * @param value
+     * @param value the value
      * @return KeyValuePairBuilder< BLDRT >
      */
     public final KeyValuePairBuilder<BLDRT> value(final Integer value) {
@@ -110,7 +140,7 @@ public class KeyValuePair implements DomainObject {
     /**
      * Set the value property.
      *
-     * @param value
+     * @param value the value
      * @return KeyValuePairBuilder< BLDRT >
      */
     public final KeyValuePairBuilder<BLDRT> value(final Boolean value) {

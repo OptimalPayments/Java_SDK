@@ -33,13 +33,18 @@ import com.optimalpayments.common.impl.AddressContainerAdapter;
 import com.optimalpayments.common.impl.IdAdapter;
 import com.optimalpayments.hostedpayment.Order;
 
+// TODO: Auto-generated Javadoc
 /**
  * OrderRebillSerializer class used to properly serialize rebill orders.
  */
 public class OrderRebillSerializer implements JsonSerializer<Order> {
   
+  /** The gson serializer. */
   private final Gson gsonSerializer;
   
+  /**
+   * Instantiates a new order rebill serializer.
+   */
   public OrderRebillSerializer() {
     final GsonBuilder gsonBuilder = new GsonBuilder();
     gsonBuilder.excludeFieldsWithoutExposeAnnotation();
@@ -55,10 +60,10 @@ public class OrderRebillSerializer implements JsonSerializer<Order> {
   /**
    * Serialize the object with out disallowed properties.
    *
-   * @param rebill
-   * @param typeOfSrc
-   * @param context
-   * @return
+   * @param rebill the rebill
+   * @param typeOfSrc the type of src
+   * @param context the context
+   * @return the json element
    */
   @Override
   public JsonElement serialize(

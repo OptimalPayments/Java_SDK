@@ -24,68 +24,140 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Authentication.
  */
 public class Authentication implements DomainObject {
 
+  /** The eci. */
   @Expose
   private Integer eci;
+  
+  /** The cavv. */
   @Expose
   private String cavv;
+  
+  /** The xid. */
   @Expose
   private String xid;
+  
+  /** The three d enrollment. */
   @Expose
   private String threeDEnrollment;
+  
+  /** The three d result. */
   @Expose
   private String threeDResult;
+  
+  /** The signature status. */
   @Expose
   private String signatureStatus;
 
+  /**
+   * Gets the eci.
+   *
+   * @return the eci
+   */
   public final Integer getEci() {
     return eci;
   }
 
+  /**
+   * Sets the eci.
+   *
+   * @param eci the new eci
+   */
   public final void setEci(final Integer eci) {
     this.eci = eci;
   }
 
+  /**
+   * Gets the cavv.
+   *
+   * @return the cavv
+   */
   public final String getCavv() {
     return cavv;
   }
 
+  /**
+   * Sets the cavv.
+   *
+   * @param cavv the new cavv
+   */
   public final void setCavv(final String cavv) {
     this.cavv = cavv;
   }
 
+  /**
+   * Gets the xid.
+   *
+   * @return the xid
+   */
   public final String getXid() {
     return xid;
   }
 
+  /**
+   * Sets the xid.
+   *
+   * @param xid the new xid
+   */
   public final void setXid(final String xid) {
     this.xid = xid;
   }
 
+  /**
+   * Gets the three d enrollment.
+   *
+   * @return the three d enrollment
+   */
   public final String getThreeDEnrollment() {
     return threeDEnrollment;
   }
 
+  /**
+   * Sets the three d enrollment.
+   *
+   * @param threeDEnrollment the new three d enrollment
+   */
   public final void setThreeDEnrollment(final String threeDEnrollment) {
     this.threeDEnrollment = threeDEnrollment;
   }
 
+  /**
+   * Gets the three d result.
+   *
+   * @return the three d result
+   */
   public final String getThreeDResult() {
     return threeDResult;
   }
 
+  /**
+   * Sets the three d result.
+   *
+   * @param threeDResult the new three d result
+   */
   public final void setThreeDResult(final String threeDResult) {
     this.threeDResult = threeDResult;
   }
 
+  /**
+   * Gets the signature status.
+   *
+   * @return the signature status
+   */
   public final String getSignatureStatus() {
     return signatureStatus;
   }
 
+  /**
+   * Sets the signature status.
+   *
+   * @param signatureStatus the new signature status
+   */
   public final void setSignatureStatus(final String signatureStatus) {
     this.signatureStatus = signatureStatus;
   }
@@ -98,8 +170,14 @@ public class Authentication implements DomainObject {
   public static class AuthenticationBuilder<BLDRT extends GenericBuilder>
           extends NestedBuilder<Authentication, BLDRT> {
 
+    /** The authentication. */
     private final Authentication authentication = new Authentication();
 
+    /**
+     * Instantiates a new authentication builder.
+     *
+     * @param parent the parent
+     */
     public AuthenticationBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -117,7 +195,7 @@ public class Authentication implements DomainObject {
     /**
      * Set the eci property.
      *
-     * @param eci
+     * @param eci the eci
      * @return AuthenticationBuilder< BLDRT >
      */
     public final AuthenticationBuilder<BLDRT> eci(final Integer eci) {
@@ -128,7 +206,7 @@ public class Authentication implements DomainObject {
     /**
      * Set the cavv property.
      *
-     * @param cavv
+     * @param cavv the cavv
      * @return AuthenticationBuilder< BLDRT >
      */
     public final AuthenticationBuilder<BLDRT> cavv(final String cavv) {
@@ -139,7 +217,7 @@ public class Authentication implements DomainObject {
     /**
      * Set the xid property.
      *
-     * @param xid
+     * @param xid the xid
      * @return AuthenticationBuilder< BLDRT >
      */
     public final AuthenticationBuilder<BLDRT> xid(
@@ -151,7 +229,7 @@ public class Authentication implements DomainObject {
     /**
      * Set the threeDEnrollment property.
      *
-     * @param threeDEnrollment
+     * @param threeDEnrollment the three d enrollment
      * @return AuthenticationBuilder< BLDRT >
      */
     public final AuthenticationBuilder<BLDRT> threeDEnrollment(final String threeDEnrollment) {
@@ -162,7 +240,7 @@ public class Authentication implements DomainObject {
     /**
      * Set the threeDResult property.
      *
-     * @param threeDResult
+     * @param threeDResult the three d result
      * @return AuthenticationBuilder< BLDRT >
      */
     public final AuthenticationBuilder<BLDRT> threeDResult(final String threeDResult) {
@@ -173,7 +251,7 @@ public class Authentication implements DomainObject {
     /**
      * Set the signatureStatus property.
      *
-     * @param signatureStatus
+     * @param signatureStatus the signature status
      * @return AuthenticationBuilder< BLDRT >
      */
     public final AuthenticationBuilder<BLDRT> signatureStatus(final String signatureStatus) {

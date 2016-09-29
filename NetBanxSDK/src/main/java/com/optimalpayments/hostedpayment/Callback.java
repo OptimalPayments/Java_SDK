@@ -25,78 +25,162 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Callback.
  */
 public class Callback implements DomainObject {
 
+  /** The format. */
   @Expose
   private Format format;
+  
+  /** The rel. */
   @Expose
   private Rel rel;
+  
+  /** The retries. */
   @Expose
   private Integer retries;
+  
+  /** The return keys. */
   @Expose
   private ArrayList<String> returnKeys;
+  
+  /** The synchronous. */
   @Expose
   private Boolean synchronous;
+  
+  /** The uri. */
   @Expose
   private String uri;
+  
+  /** The delimiter. */
   @Expose
   private String delimiter;
 
+  /**
+   * Gets the format.
+   *
+   * @return the format
+   */
   public final Format getFormat() {
     return format;
   }
 
+  /**
+   * Sets the format.
+   *
+   * @param format the new format
+   */
   public final void setFormat(final Format format) {
     this.format = format;
   }
 
+  /**
+   * Gets the rel.
+   *
+   * @return the rel
+   */
   public final Rel getRel() {
     return rel;
   }
 
+  /**
+   * Sets the rel.
+   *
+   * @param rel the new rel
+   */
   public final void setRel(final Rel rel) {
     this.rel = rel;
   }
 
+  /**
+   * Gets the retries.
+   *
+   * @return the retries
+   */
   public final Integer getRetries() {
     return retries;
   }
 
+  /**
+   * Sets the retries.
+   *
+   * @param retries the new retries
+   */
   public final void setRetries(final Integer retries) {
     this.retries = retries;
   }
 
+  /**
+   * Gets the return keys.
+   *
+   * @return the return keys
+   */
   public final ArrayList<String> getReturnKeys() {
     return returnKeys;
   }
 
+  /**
+   * Sets the return keys.
+   *
+   * @param returnKeys the new return keys
+   */
   public final void setReturnKeys(final ArrayList<String> returnKeys) {
     this.returnKeys = returnKeys;
   }
 
+  /**
+   * Gets the synchronous.
+   *
+   * @return the synchronous
+   */
   public final Boolean getSynchronous() {
     return synchronous;
   }
 
+  /**
+   * Sets the synchronous.
+   *
+   * @param synchronous the new synchronous
+   */
   public final void setSynchronous(final Boolean synchronous) {
     this.synchronous = synchronous;
   }
 
+  /**
+   * Gets the uri.
+   *
+   * @return the uri
+   */
   public final String getUri() {
     return uri;
   }
 
+  /**
+   * Sets the uri.
+   *
+   * @param uri the new uri
+   */
   public final void setUri(final String uri) {
     this.uri = uri;
   }
 
+  /**
+   * Gets the delimiter.
+   *
+   * @return the delimiter
+   */
   public final String getDelimiter() {
     return delimiter;
   }
 
+  /**
+   * Sets the delimiter.
+   *
+   * @param delimiter the new delimiter
+   */
   public final void setDelimiter(final String delimiter) {
     this.delimiter = delimiter;
   }
@@ -109,8 +193,14 @@ public class Callback implements DomainObject {
   public static class CallbackBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<Callback, BLDRT> {
 
+    /** The callback. */
     private final Callback callback = new Callback();
 
+    /**
+     * Instantiates a new callback builder.
+     *
+     * @param parent the parent
+     */
     public CallbackBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -128,7 +218,7 @@ public class Callback implements DomainObject {
     /**
      * Set the format property.
      *
-     * @param format
+     * @param format the format
      * @return CallbackBuilder< BLDRT >
      */
     public final CallbackBuilder<BLDRT> format(final Format format) {
@@ -139,7 +229,7 @@ public class Callback implements DomainObject {
     /**
      * Set the rel property.
      *
-     * @param rel
+     * @param rel the rel
      * @return CallbackBuilder< BLDRT >
      */
     public final CallbackBuilder<BLDRT> rel(final Rel rel) {
@@ -150,7 +240,7 @@ public class Callback implements DomainObject {
     /**
      * Set the retries property.
      *
-     * @param retries
+     * @param retries the retries
      * @return CallbackBuilder< BLDRT >
      */
     public final CallbackBuilder<BLDRT> retries(final Integer retries) {
@@ -161,7 +251,7 @@ public class Callback implements DomainObject {
     /**
      * Add to the returnKeys property.
      *
-     * @param returnKey
+     * @param returnKey the return key
      * @return CallbackBuilder< BLDRT >
      */
     public final CallbackBuilder<BLDRT> addReturnKey(final String returnKey) {
@@ -177,7 +267,7 @@ public class Callback implements DomainObject {
     /**
      * Set the synchronous property.
      *
-     * @param synchronous
+     * @param synchronous the synchronous
      * @return CallbackBuilder< BLDRT >
      */
     public final CallbackBuilder<BLDRT> synchronous(final Boolean synchronous) {
@@ -188,7 +278,7 @@ public class Callback implements DomainObject {
     /**
      * Set the uri property.
      *
-     * @param uri
+     * @param uri the uri
      * @return CallbackBuilder< BLDRT >
      */
     public final CallbackBuilder<BLDRT> uri(final String uri) {
@@ -199,7 +289,7 @@ public class Callback implements DomainObject {
     /**
      * Set the delimiter property.
      *
-     * @param delimiter
+     * @param delimiter the delimiter
      * @return CallbackBuilder< BLDRT >
      */
     public final CallbackBuilder<BLDRT> delimiter(final String delimiter) {

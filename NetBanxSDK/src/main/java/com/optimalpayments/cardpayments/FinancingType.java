@@ -18,11 +18,15 @@
  */
 package com.optimalpayments.cardpayments;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by AccordD.
  */
 public enum FinancingType {
 
+  /** The deferred payment. */
   DEFERRED_PAYMENT,
+  
+  /** The equal payment. */
   EQUAL_PAYMENT
 }

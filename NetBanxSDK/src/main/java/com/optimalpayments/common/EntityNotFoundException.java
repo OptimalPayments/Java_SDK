@@ -20,11 +20,23 @@ package com.optimalpayments.common;
 
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * Exception type thrown by any 404 error from the API.
  */
 public class EntityNotFoundException extends OptimalException {
 
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
+   * Instantiates a new entity not found exception.
+   *
+   * @param obj the obj
+   * @param cause the cause
+   */
   public EntityNotFoundException(final BaseDomainObject obj, final Throwable cause) {
     super(obj, cause);
   }

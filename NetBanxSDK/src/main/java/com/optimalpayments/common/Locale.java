@@ -20,15 +20,21 @@ package com.optimalpayments.common;
 
 import com.google.gson.annotations.SerializedName;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by ShippingDetails.
  */
 public enum Locale {
 
+  /** The en us. */
   @SerializedName("en_US")
   EN_US,
+  
+  /** The en gb. */
   @SerializedName("en_GB")
   EN_GB,
+  
+  /** The fr ca. */
   @SerializedName("fr_CA")
   FR_CA
 }

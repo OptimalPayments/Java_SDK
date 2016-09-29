@@ -18,11 +18,15 @@
  */
 package com.optimalpayments.cardpayments;
 
+// TODO: Auto-generated Javadoc
 /**
  * Recurring used by Authorization class.
  */
 public enum Recurring {
 
+  /** The initial. */
   INITIAL,
+  
+  /** The recurrin. */
   RECURRIN
 }

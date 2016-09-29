@@ -26,11 +26,15 @@ import java.util.HashMap;
 
 import com.optimalpayments.common.OptimalException;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Request.
  */
 public class Request {
 
+  /**
+   * Instantiates a new request.
+   */
   private Request() {
 
   }
@@ -58,7 +62,9 @@ public class Request {
   /**
    * The serializer.
    */
-  private JsonSerializer serializer;
+
+@SuppressWarnings("rawtypes")
+private JsonSerializer serializer;
 
   /**
    * Get the body to be serialized.
@@ -81,9 +87,9 @@ public class Request {
   /**
    * Build URL for the optimal API client.
    *
-   * @param apiEndPoint
+   * @param apiEndPoint the api end point
    * @return String
-   * @throws OptimalException
+   * @throws OptimalException the optimal exception
    */
   public final String buildUrl(final String apiEndPoint) throws OptimalException {
     if (null == uri) {
@@ -101,7 +107,13 @@ public class Request {
             + (null == queryStr || queryStr.isEmpty() ? "" : "?" + buildQueryString());
   }
 
-  public JsonSerializer getSerializer() {
+  /**
+   * Gets the serializer.
+   *
+   * @return the serializer
+   */
+  @SuppressWarnings("rawtypes")
+public JsonSerializer getSerializer() {
     return serializer;
   }
 
@@ -109,7 +121,7 @@ public class Request {
    * Builds the query string.
    *
    * @return the string
-   * @throws RuntimeException
+   * @throws RuntimeException the runtime exception
    */
   private String buildQueryString() throws RuntimeException {
 
@@ -148,6 +160,7 @@ public class Request {
    */
   public static class RequestBuilder {
 
+    /** The request. */
     private final Request request = new Request();
 
     /**
@@ -162,7 +175,7 @@ public class Request {
     /**
      * Set the uri.
      *
-     * @param uri
+     * @param uri the uri
      * @return RequestBuilder
      */
     public final RequestBuilder uri(final String uri) {
@@ -173,7 +186,7 @@ public class Request {
     /**
      * Set the body.
      *
-     * @param body
+     * @param body the body
      * @return RequestBuilder
      */
     public final RequestBuilder body(final BaseDomainObject body) {
@@ -184,7 +197,7 @@ public class Request {
     /**
      * Set the method.
      *
-     * @param method
+     * @param method the method
      * @return RequestBuilder
      */
     public final RequestBuilder method(final RequestType method) {
@@ -195,10 +208,11 @@ public class Request {
     /**
      * Set the serializer.
      *
-     * @param serializer
+     * @param serializer the serializer
      * @return RequestBuilder
      */
-    public final RequestBuilder serializer(final JsonSerializer serializer) {
+    @SuppressWarnings("rawtypes")
+	public final RequestBuilder serializer(final JsonSerializer serializer) {
       request.serializer = serializer;
       return this;
     }
@@ -206,7 +220,7 @@ public class Request {
     /**
      * Set the queryStr.
      *
-     * @param queryStr
+     * @param queryStr the query str
      * @return RequestBuilder
      */
     public final RequestBuilder queryStr(final HashMap<String, String> queryStr) {

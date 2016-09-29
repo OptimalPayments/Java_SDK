@@ -19,13 +19,76 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>cardPaymentSimple</servlet-name>
 		<servlet-class>com.netbanx.websample.CardPaymentSimpleServlet</servlet-class>
 	</servlet>
-
-
+	
+	<servlet>
+		<servlet-name>directDebitSample</servlet-name>
+		<servlet-class>com.netbanx.websample.DirectDebitSampleServlet</servlet-class>
+	</servlet>
+	
 	<servlet>
 		<servlet-name>cardPaymentWithCustomerVault</servlet-name>
 		<servlet-class>com.netbanx.websample.CardPaymentWithCustomerVaultServlet</servlet-class>
 	</servlet>
-
+	
+	<servlet>
+		<servlet-name>DirectDebitSamplePaymentToken</servlet-name>
+		<servlet-class>com.netbanx.websample.DirectDebitSamplePaymentToken</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DirectDebitStandaloneSamplePaymentToken</servlet-name>
+		<servlet-class>com.netbanx.websample.DirectDebitStandaloneSamplePaymentToken</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DirectDebitACHPurchase</servlet-name>
+		<servlet-class>com.netbanx.websample.DirectDebitACHPurchase</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DirectDebitACHStandaloneCredit</servlet-name>
+		<servlet-class>com.netbanx.websample.DirectDebitACHStandaloneCredit</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DirectDebitEFTPurchase</servlet-name>
+		<servlet-class>com.netbanx.websample.DirectDebitEFTPurchase</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DirectDebitEFTStandaloneCredit</servlet-name>
+		<servlet-class>com.netbanx.websample.DirectDebitEFTStandaloneCredit</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerVaultACHBank</servlet-name>
+		<servlet-class>com.netbanx.websample.CustomerVaultACHBank</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerVaultEFTBank</servlet-name>
+		<servlet-class>com.netbanx.websample.CustomerVaultEFTBank</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerVaultSEPABank</servlet-name>
+		<servlet-class>com.netbanx.websample.CustomerVaultSEPABank</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerVaultBACSBank</servlet-name>
+		<servlet-class>com.netbanx.websample.CustomerVaultBACSBank</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>CustomerVaultMandates</servlet-name>
+		<servlet-class>com.netbanx.websample.CustomerVaultMandates</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ThreedSecure</servlet-name>
+		<servlet-class>com.netbanx.websample.ThreeDSecureSimpleServlet</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
 	  <servlet-name>hostedPaymentSimple</servlet-name>
 	  <url-pattern>/hosted-payment-simple</url-pattern>
@@ -35,18 +98,84 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	  <servlet-name>hostedPaymentSilent</servlet-name>
 	  <url-pattern>/hosted-payment-silent</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>directDebitSample</servlet-name>
+	  <url-pattern>/direct-debit-sample</url-pattern>
+	</servlet-mapping>
+	
 
 	<servlet-mapping>
 	  <servlet-name>cardPaymentSimple</servlet-name>
 	  <url-pattern>/card-payment-simple</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>DirectDebitSamplePaymentToken</servlet-name>
+	  <url-pattern>/direct-debit-sample-payment-token</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>DirectDebitStandaloneSamplePaymentToken</servlet-name>
+	  <url-pattern>/direct-debit-standalone-sample-payment-token</url-pattern>
+	</servlet-mapping>
+
 
 	<servlet-mapping>
 	  <servlet-name>cardPaymentWithCustomerVault</servlet-name>
 	  <url-pattern>/card-payment-w-customervault</url-pattern>
 	</servlet-mapping>
-
-
+	
+	<servlet-mapping>
+	  <servlet-name>DirectDebitACHPurchase</servlet-name>
+	  <url-pattern>/direct-debit-ach-purchase</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>DirectDebitACHStandaloneCredit</servlet-name>
+	  <url-pattern>/direct-debit-ach-standalone-credit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>DirectDebitEFTPurchase</servlet-name>
+	  <url-pattern>/direct-debit-eft-purchase</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>DirectDebitEFTStandaloneCredit</servlet-name>
+	  <url-pattern>/direct-debit-eft-standalone-credit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>CustomerVaultACHBank</servlet-name>
+	  <url-pattern>/customerVaultACHBank</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>CustomerVaultEFTBank</servlet-name>
+	  <url-pattern>/customerVaultEFTBank</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>CustomerVaultSEPABank</servlet-name>
+	  <url-pattern>/customerVaultSEPABank</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>CustomerVaultBACSBank</servlet-name>
+	  <url-pattern>/customerVaultBACSBank</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>CustomerVaultMandates</servlet-name>
+	  <url-pattern>/customerVaultMandates</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	  <servlet-name>ThreedSecure</servlet-name>
+	  <url-pattern>/threeDSecure</url-pattern>
+	</servlet-mapping>
+		
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>

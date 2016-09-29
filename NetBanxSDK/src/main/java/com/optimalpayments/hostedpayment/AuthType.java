@@ -20,17 +20,25 @@ package com.optimalpayments.hostedpayment;
 
 import com.google.gson.annotations.SerializedName;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by Refund, Settlement and Transaction.
  */
 public enum AuthType {
 
+  /** The auth. */
   @SerializedName("auth")
   AUTH,
+  
+  /** The purchase. */
   @SerializedName("purchase")
   PURCHASE,
+  
+  /** The settlement. */
   @SerializedName("settlement")
   SETTLEMENT,
+  
+  /** The refund. */
   @SerializedName("refund")
   REFUND
 }

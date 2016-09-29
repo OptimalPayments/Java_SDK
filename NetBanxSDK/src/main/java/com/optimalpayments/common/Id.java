@@ -20,6 +20,7 @@ package com.optimalpayments.common;
 
 import com.optimalpayments.common.impl.BaseDomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * An id for a domain classes.
  *
@@ -27,9 +28,18 @@ import com.optimalpayments.common.impl.BaseDomainObject;
  */
 public class Id<T extends BaseDomainObject> {
 
+  /** The id. */
   private final String id;
+  
+  /** The type. */
   private final Class<T> type;
 
+  /**
+   * Instantiates a new id.
+   *
+   * @param id the id
+   * @param type the type
+   */
   private Id(String id, Class<T> type) {
     this.id = id;
     this.type = type;
@@ -44,11 +54,17 @@ public class Id<T extends BaseDomainObject> {
     return type;
   }
 
+  /* (non-Javadoc)
+   * @see java.lang.Object#toString()
+   */
   @Override
   public String toString() {
     return id;
   }
 
+  /* (non-Javadoc)
+   * @see java.lang.Object#hashCode()
+   */
   @Override
   public int hashCode() {
     final int prime = 31;
@@ -60,7 +76,8 @@ public class Id<T extends BaseDomainObject> {
 
   /**
    * Overridden to allow to similar objects to be compared (same id and type).
-   * 
+   *
+   * @param obj the obj
    * @return Boolean
    */
   @Override
@@ -94,10 +111,10 @@ public class Id<T extends BaseDomainObject> {
 
   /**
    * Instantiate a new id object.
-   * 
-   * @param <U>
-   * @param id
-   * @param classType
+   *
+   * @param <U> the generic type
+   * @param id the id
+   * @param classType the class type
    * @return Id< U >
    */
   public static final <U extends BaseDomainObject> Id<U> create(String id, Class<U> classType) {

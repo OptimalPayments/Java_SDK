@@ -20,62 +20,134 @@ package com.optimalpayments.hostedpayment;
 
 import com.optimalpayments.common.impl.DomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Card.
  */
 public class Card implements DomainObject {
 
+  /** The brand. */
   private String brand;
+  
+  /** The country. */
   private String country;
+  
+  /** The expiry. */
   private String expiry;
+  
+  /** The last digits. */
   private String lastDigits;
+  
+  /** The three d enrolment. */
   private String threeDEnrolment;
+  
+  /** The type. */
   private String type;
 
+  /**
+   * Gets the brand.
+   *
+   * @return the brand
+   */
   public final String getBrand() {
     return brand;
   }
 
+  /**
+   * Sets the brand.
+   *
+   * @param brand the new brand
+   */
   public final void setBrand(final String brand) {
     this.brand = brand;
   }
 
+  /**
+   * Gets the country.
+   *
+   * @return the country
+   */
   public final String getCountry() {
     return country;
   }
 
+  /**
+   * Sets the country.
+   *
+   * @param country the new country
+   */
   public final void setCountry(final String country) {
     this.country = country;
   }
 
+  /**
+   * Gets the expiry.
+   *
+   * @return the expiry
+   */
   public final String getExpiry() {
     return expiry;
   }
 
+  /**
+   * Sets the expiry.
+   *
+   * @param expiry the new expiry
+   */
   public final void setExpiry(final String expiry) {
     this.expiry = expiry;
   }
 
+  /**
+   * Gets the last digits.
+   *
+   * @return the last digits
+   */
   public final String getLastDigits() {
     return lastDigits;
   }
 
+  /**
+   * Sets the last digits.
+   *
+   * @param lastDigits the new last digits
+   */
   public final void setLastDigits(final String lastDigits) {
     this.lastDigits = lastDigits;
   }
 
+  /**
+   * Gets the three d enrolment.
+   *
+   * @return the three d enrolment
+   */
   public final String getThreeDEnrolment() {
     return threeDEnrolment;
   }
 
+  /**
+   * Sets the three d enrolment.
+   *
+   * @param threeDEnrolment the new three d enrolment
+   */
   public final void setThreeDEnrolment(final String threeDEnrolment) {
     this.threeDEnrolment = threeDEnrolment;
   }
 
+  /**
+   * Gets the type.
+   *
+   * @return the type
+   */
   public final String getType() {
     return type;
   }
 
+  /**
+   * Sets the type.
+   *
+   * @param type the new type
+   */
   public final void setType(final String type) {
     this.type = type;
   }

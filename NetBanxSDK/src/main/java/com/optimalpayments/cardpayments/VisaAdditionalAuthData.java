@@ -21,44 +21,92 @@ package com.optimalpayments.cardpayments;
 import com.optimalpayments.common.DateOfBirth;
 import com.optimalpayments.common.impl.DomainObject;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class VisaAdditionalAuthData.
  */
 public class VisaAdditionalAuthData implements DomainObject {
 
+  /** The recipient date of birth. */
   private DateOfBirth recipientDateOfBirth;
+  
+  /** The recipient zip. */
   private String recipientZip;
+  
+  /** The recipient last name. */
   private String recipientLastName;
+  
+  /** The recipient account number. */
   private String recipientAccountNumber;
 
+  /**
+   * Gets the recipient date of birth.
+   *
+   * @return the recipient date of birth
+   */
   public final DateOfBirth getRecipientDateOfBirth() {
     return recipientDateOfBirth;
   }
 
+  /**
+   * Sets the recipient date of birth.
+   *
+   * @param recipientDateOfBirth the new recipient date of birth
+   */
   public final void setRecipientDateOfBirth(final DateOfBirth recipientDateOfBirth) {
     this.recipientDateOfBirth = recipientDateOfBirth;
   }
 
+  /**
+   * Gets the recipient zip.
+   *
+   * @return the recipient zip
+   */
   public final String getRecipientZip() {
     return recipientZip;
   }
 
+  /**
+   * Sets the recipient zip.
+   *
+   * @param recipientZip the new recipient zip
+   */
   public final void setRecipientZip(final String recipientZip) {
     this.recipientZip = recipientZip;
   }
 
+  /**
+   * Gets the recipient last name.
+   *
+   * @return the recipient last name
+   */
   public final String getRecipientLastName() {
     return recipientLastName;
   }
 
+  /**
+   * Sets the recipient last name.
+   *
+   * @param recipientLastName the new recipient last name
+   */
   public final void setRecipientLastName(final String recipientLastName) {
     this.recipientLastName = recipientLastName;
   }
 
+  /**
+   * Gets the recipient account number.
+   *
+   * @return the recipient account number
+   */
   public final String getRecipientAccountNumber() {
     return recipientAccountNumber;
   }
 
+  /**
+   * Sets the recipient account number.
+   *
+   * @param recipientAccountNumber the new recipient account number
+   */
   public final void setRecipientAccountNumber(final String recipientAccountNumber) {
     this.recipientAccountNumber = recipientAccountNumber;
   }

@@ -20,33 +20,57 @@ package com.optimalpayments.common;
 
 import com.google.gson.annotations.SerializedName;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by ShippingDetails.
  */
 public enum Carrier {
 
+  /** The anpost. */
   @SerializedName("APS")
   ANPOST,
+  
+  /** The apc. */
   @SerializedName("APC")
   APC,
+  
+  /** The canada post. */
   @SerializedName("CAD")
   CANADA_POST,
+  
+  /** The city link. */
   @SerializedName("CLK")
   CITY_LINK,
+  
+  /** The dhl. */
   @SerializedName("DHL")
   DHL,
+  
+  /** The ems. */
   @SerializedName("EMS")
   EMS,
+  
+  /** The fedex. */
   @SerializedName("FEX")
   FEDEX,
+  
+  /** The nexworldwide. */
   @SerializedName("NEX")
   NEXWORLDWIDE,
+  
+  /** The other. */
   @SerializedName("OTHER")
   OTHER,
+  
+  /** The royal mail. */
   @SerializedName("RML")
   ROYAL_MAIL,
+  
+  /** The ups. */
   @SerializedName("UPS")
   UPS,
+  
+  /** The usps. */
   @SerializedName("USPS")
   USPS
 }

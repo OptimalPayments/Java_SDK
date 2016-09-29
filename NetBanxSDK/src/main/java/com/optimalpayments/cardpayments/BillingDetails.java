@@ -24,6 +24,7 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class BillingDetails.
  */
@@ -37,13 +38,27 @@ public class BillingDetails extends AddressContainer implements DomainObject {
   public static class BillingDetailsBuilder<BLDRT extends GenericBuilder>
           extends NestedBuilder<BillingDetails, BLDRT> {
 
+    /** The billing details. */
     private final BillingDetails billingDetails = new BillingDetails();
+    
+    /** The address details. */
     private AddressDetails addressDetails = new AddressDetails();
 
+    /**
+     * Instantiates a new billing details builder.
+     *
+     * @param parent the parent
+     */
     public BillingDetailsBuilder(final BLDRT parent) {
       super(parent);
     }
 
+    /**
+     * Instantiates a new billing details builder.
+     *
+     * @param parent the parent
+     * @param a the a
+     */
     public BillingDetailsBuilder(
             final BLDRT parent,
             com.optimalpayments.customervault.Address a) {
@@ -67,7 +82,7 @@ public class BillingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the street property.
      *
-     * @param street
+     * @param street the street
      * @return BillingDetailsBuilder< BLDRT >
      */
     public final BillingDetailsBuilder<BLDRT> street(final String street) {
@@ -78,7 +93,7 @@ public class BillingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the street2 property.
      *
-     * @param street2
+     * @param street2 the street2
      * @return BillingDetailsBuilder< BLDRT >
      */
     public final BillingDetailsBuilder<BLDRT> street2(final String street2) {
@@ -89,7 +104,7 @@ public class BillingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the city property.
      *
-     * @param city
+     * @param city the city
      * @return BillingDetailsBuilder< BLDRT >
      */
     public final BillingDetailsBuilder<BLDRT> city(final String city) {
@@ -100,7 +115,7 @@ public class BillingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the state property.
      *
-     * @param state
+     * @param state the state
      * @return BillingDetailsBuilder< BLDRT >
      */
     public final BillingDetailsBuilder<BLDRT> state(final String state) {
@@ -111,7 +126,7 @@ public class BillingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the country property.
      *
-     * @param country
+     * @param country the country
      * @return BillingDetailsBuilder< BLDRT >
      */
     public final BillingDetailsBuilder<BLDRT> country(final String country) {
@@ -122,7 +137,7 @@ public class BillingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the zip property.
      *
-     * @param zip
+     * @param zip the zip
      * @return BillingDetailsBuilder< BLDRT >
      */
     public final BillingDetailsBuilder<BLDRT> zip(final String zip) {
@@ -133,7 +148,7 @@ public class BillingDetails extends AddressContainer implements DomainObject {
     /**
      * Set the phone property.
      *
-     * @param phone
+     * @param phone the phone
      * @return BillingDetailsBuilder< BLDRT >
      */
     public final BillingDetailsBuilder<BLDRT> phone(final String phone) {

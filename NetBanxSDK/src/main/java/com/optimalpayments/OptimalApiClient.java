@@ -19,8 +19,10 @@
 package com.optimalpayments;
 
 import com.google.gson.Gson;
+
 import com.google.gson.GsonBuilder;
 
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -48,8 +50,10 @@ import com.optimalpayments.common.impl.BooleanAdapter;
 import com.optimalpayments.common.impl.IdAdapter;
 import com.optimalpayments.common.impl.Request;
 import com.optimalpayments.customervault.CustomerVaultService;
+import com.optimalpayments.directdebit.DirectDebitService;
 import com.optimalpayments.hostedpayment.HostedPaymentService;
-
+import com.optimalpayments.threedsecure.ThreeDSecureService;
+// TODO: Auto-generated Javadoc
 /**
  * The Class NetBanxApiClient.
  */
@@ -95,6 +99,17 @@ public class OptimalApiClient {
    */
   private HostedPaymentService hostedPaymentService;
   
+  /**
+   * The DirectDebitService.
+   */
+   private DirectDebitService directDebitService;
+  
+  /**
+   * The ThreeDSecureService.
+   */
+  private  ThreeDSecureService threeDSecureService; 
+   
+   
   /**
    * The gson object used to deserialize the api response.
    */
@@ -180,12 +195,36 @@ public class OptimalApiClient {
     }
     return hostedPaymentService;
   }
+    
+  /**
+   * directDebitService.
+   *
+   * @return the directDebitService
+  */ 
+  
+  public final DirectDebitService directDebitService() {
+    if (null == directDebitService) {
+    	directDebitService = new DirectDebitService(this);
+    }
+    return directDebitService;
+  }
+  /**
+   * ThreeD Secure Service.
+   *
+   * @return the ThreeD Secure Service
+   */
+  public final ThreeDSecureService threeDSecureService() {
+    if (null == threeDSecureService) {
+    	threeDSecureService = new ThreeDSecureService(this);
+    }
+    return threeDSecureService;
+  }
 
   /**
    * Process error.
    *
    * @param code the response code
-   * @param message the object to embed in the exception
+   * @param obj the obj
    * @param cause the original exception
    * @return the exception
    */
@@ -219,15 +258,16 @@ public class OptimalApiClient {
    * @param <T> an extension of BaseDomainObject
    * @param request the Request object to be processed
    * @param returnType the class that will be returned
-   * @return
-   * @throws IOException
-   * @throws OptimalException
+   * @return the t
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
   public final <T extends BaseDomainObject> T processRequest(
           final Request request,
           Class<T> returnType)
           throws IOException, OptimalException {
     final URL url = new URL(request.buildUrl(apiEndPoint));
+   
     final HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
     try {
       connection.setRequestProperty("Authorization", "Basic " + getAuthenticatedString());
@@ -262,34 +302,31 @@ public class OptimalApiClient {
    * @param <T> an extension of BaseDomainObject
    * @param connection HttpsURLConnection
    * @param returnType the class that will be returned
-   * @return
-   * @throws IOException
-   * @throws OptimalException
+   * @return the return object
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws OptimalException the optimal exception
    */
-  private <T extends BaseDomainObject> T getReturnObject(
-          HttpsURLConnection connection,
-          Class<T> returnType)
-          throws IOException, OptimalException {
-    try {
-      InputStream is = connection.getInputStream();
-      try {
-        return deserializeStream(is, returnType);
-      } finally {
-        is.close();
-      }
-    } catch (IOException cause) {
-      //store the cause so we know to throw an exception after parsing the response
-      InputStream is = connection.getErrorStream();
-      try {
-        throw getException(
-                connection.getResponseCode(),
-                deserializeStream(is, returnType),
-                cause);
-      } finally {
-        is.close();
-      }
-    }
-  }
+	private <T extends BaseDomainObject> T getReturnObject(HttpsURLConnection connection, Class<T> returnType)
+			throws IOException, OptimalException {
+		try {
+			InputStream is = connection.getInputStream();
+
+			try {
+				return deserializeStream(is, returnType);
+			} finally {
+				is.close();
+			}
+		} catch (IOException cause) {
+			// store the cause so we know to throw an exception after parsing
+			// the response
+			InputStream is = connection.getErrorStream();
+			try {
+				throw getException(connection.getResponseCode(), deserializeStream(is, returnType), cause);
+			} finally {
+				is.close();
+			}
+		}
+	}
 
   /**
    * Take an input stream and return the gson deserialized version.
@@ -297,15 +334,15 @@ public class OptimalApiClient {
    * @param <T> an extension of BaseDomainObject
    * @param is the input stream
    * @param returnType the class that will be returned
-   * @return
-   * @throws IOException
+   * @return the t
+   * @throws IOException Signals that an I/O exception has occurred.
    */
   private <T extends BaseDomainObject> T deserializeStream(
           InputStream is,
           Class<T> returnType)
           throws IOException {
     final InputStreamReader isr = new InputStreamReader(is, "UTF-8");
-    try {
+	    try {
       return gsonDeserializer.fromJson(isr, returnType);
     } finally {
       isr.close();
@@ -315,7 +352,8 @@ public class OptimalApiClient {
   /**
    * Take a domain object, and json serialize it.
    *
-   * @param obj
+   * @param request the request
+   * @param returnType the return type
    * @return json encoding of the request object
    */
   private String serializeObject(Request request, Class<?> returnType)  {
@@ -334,10 +372,20 @@ public class OptimalApiClient {
     return gson.toJson(request.getBody());
   }
 
+  /**
+   * Sets the account.
+   *
+   * @param accountNumber the new account
+   */
   public final void setAccount(String accountNumber) {
     this.accountNumber = accountNumber;
   }
 
+  /**
+   * Gets the account.
+   *
+   * @return the account
+   */
   public final String getAccount() {
     return accountNumber;
   }
@@ -346,7 +394,7 @@ public class OptimalApiClient {
    * Gets the base 64 encoded authenticated string.
    *
    * @return the authenticated string
-   * @throws IOException
+   * @throws IOException Signals that an I/O exception has occurred.
    */
   private String getAuthenticatedString() throws IOException{
     return javax.xml.bind.DatatypeConverter.printBase64Binary(

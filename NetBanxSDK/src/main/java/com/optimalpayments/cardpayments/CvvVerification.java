@@ -18,13 +18,21 @@
  */
 package com.optimalpayments.cardpayments;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used by Authorization and Verification Objects.
  */
 public enum CvvVerification {
 
+  /** The match. */
   MATCH,
+  
+  /** The no match. */
   NO_MATCH,
+  
+  /** The not processed. */
   NOT_PROCESSED,
+  
+  /** The unknown. */
   UNKNOWN
 }

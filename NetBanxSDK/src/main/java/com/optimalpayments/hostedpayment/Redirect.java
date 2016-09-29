@@ -26,48 +26,96 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Redirect.
  */
 public class Redirect implements DomainObject {
 
+  /** The rel. */
   @Expose
   private Rel rel;
+  
+  /** The return keys. */
   @Expose
   private ArrayList<String> returnKeys;
+  
+  /** The uri. */
   @Expose
   private String uri;
+  
+  /** The delimiter. */
   @Expose
   private String delimiter;
 
+  /**
+   * Gets the rel.
+   *
+   * @return the rel
+   */
   public Rel getRel() {
     return rel;
   }
 
+  /**
+   * Sets the rel.
+   *
+   * @param rel the new rel
+   */
   public void setRel(final Rel rel) {
     this.rel = rel;
   }
 
+  /**
+   * Gets the return keys.
+   *
+   * @return the return keys
+   */
   public ArrayList<String> getReturnKeys() {
     return returnKeys;
   }
 
+  /**
+   * Sets the return keys.
+   *
+   * @param returnKeys the new return keys
+   */
   public void setReturnKeys(final ArrayList<String> returnKeys) {
     this.returnKeys = returnKeys;
   }
 
+  /**
+   * Gets the uri.
+   *
+   * @return the uri
+   */
   public String getUri() {
     return uri;
   }
 
+  /**
+   * Sets the uri.
+   *
+   * @param uri the new uri
+   */
   public void setUri(final String uri) {
     this.uri = uri;
   }
 
+  /**
+   * Gets the delimiter.
+   *
+   * @return the delimiter
+   */
   public String getDelimiter() {
     return delimiter;
   }
 
+  /**
+   * Sets the delimiter.
+   *
+   * @param delimiter the new delimiter
+   */
   public void setDelimiter(final String delimiter) {
     this.delimiter = delimiter;
   }
@@ -80,8 +128,14 @@ public class Redirect implements DomainObject {
   public static class RedirectBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<Redirect, BLDRT> {
 
+    /** The redirect. */
     private final Redirect redirect = new Redirect();
     
+    /**
+     * Instantiates a new redirect builder.
+     *
+     * @param parent the parent
+     */
     public RedirectBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -99,7 +153,7 @@ public class Redirect implements DomainObject {
     /**
      * Set the rel property.
      *
-     * @param rel
+     * @param rel the rel
      * @return RedirectBuilder< BLDRT >
      */
     public RedirectBuilder<BLDRT> rel(final Rel rel) {
@@ -110,7 +164,7 @@ public class Redirect implements DomainObject {
     /**
      * Add to the returnKeys property.
      *
-     * @param returnKey
+     * @param returnKey the return key
      * @return RedirectBuilder< BLDRT >
      */
     public RedirectBuilder<BLDRT> addReturnKey(final String returnKey) {
@@ -126,7 +180,7 @@ public class Redirect implements DomainObject {
     /**
      * Set the uri property.
      *
-     * @param uri
+     * @param uri the uri
      * @return RedirectBuilder< BLDRT >
      */
     public RedirectBuilder<BLDRT> uri(final String uri) {
@@ -137,7 +191,7 @@ public class Redirect implements DomainObject {
     /**
      * Set the delimiter property.
      *
-     * @param delimiter
+     * @param delimiter the delimiter
      * @return RedirectBuilder< BLDRT >
      */
     public RedirectBuilder<BLDRT> delimiter(final String delimiter) {

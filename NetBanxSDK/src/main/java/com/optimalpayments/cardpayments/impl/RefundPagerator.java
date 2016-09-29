@@ -22,11 +22,13 @@ import java.util.ArrayList;
 
 import com.optimalpayments.cardpayments.Refund;
 
+// TODO: Auto-generated Javadoc
 /**
  * Used to iterate over pages of results.
  */
 public class RefundPagerator extends CardPaymentsPagerator<Refund> {
   
+  /** The refunds. */
   private ArrayList<Refund> refunds;
   
   /**

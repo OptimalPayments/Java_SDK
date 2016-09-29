@@ -24,28 +24,52 @@ import com.optimalpayments.common.impl.DomainObject;
 import com.optimalpayments.common.impl.GenericBuilder;
 import com.optimalpayments.common.impl.NestedBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class CardExpiry.
  */
 public class CardExpiry implements DomainObject {
 
+  /** The month. */
   @Expose
   private Integer month;
+  
+  /** The year. */
   @Expose
   private Integer year;
 
+  /**
+   * Gets the month.
+   *
+   * @return the month
+   */
   public final Integer getMonth() {
     return month;
   }
 
+  /**
+   * Sets the month.
+   *
+   * @param month the new month
+   */
   public final void setMonth(final Integer month) {
     this.month = month;
   }
 
+  /**
+   * Gets the year.
+   *
+   * @return the year
+   */
   public final Integer getYear() {
     return year;
   }
 
+  /**
+   * Sets the year.
+   *
+   * @param year the new year
+   */
   public final void setYear(final Integer year) {
     this.year = year;
   }
@@ -58,8 +82,14 @@ public class CardExpiry implements DomainObject {
   public static class CardExpiryBuilder<BLDRT extends GenericBuilder> extends
           NestedBuilder<CardExpiry, BLDRT> {
 
+    /** The card expiry. */
     private final CardExpiry cardExpiry = new CardExpiry();
 
+    /**
+     * Instantiates a new card expiry builder.
+     *
+     * @param parent the parent
+     */
     public CardExpiryBuilder(final BLDRT parent) {
       super(parent);
     }
@@ -77,7 +107,7 @@ public class CardExpiry implements DomainObject {
     /**
      * Set the month property.
      *
-     * @param month
+     * @param month the month
      * @return CardExpiryBuilder< BLDRT >
      */
     public final CardExpiryBuilder<BLDRT> month(final Integer month) {
@@ -88,7 +118,7 @@ public class CardExpiry implements DomainObject {
     /**
      * Set the year property.
      *
-     * @param year
+     * @param year the year
      * @return CardExpiryBuilder< BLDRT >
      */
     public final CardExpiryBuilder<BLDRT> year(final Integer year) {
