@@ -61,7 +61,7 @@ public class DirectDebitSampleServlet extends NetBanxServletBase {
     // Initiate a new instance of the DirectDebit Service
     //Initialize the NetBanxApiClient
 	PrintWriter out = response.getWriter();
-	out.println("hiiii");
+
     OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST);
 
     int totalAmount = (int) (Double.valueOf(request.getParameter("amount")) * this.currencyMultiplier);

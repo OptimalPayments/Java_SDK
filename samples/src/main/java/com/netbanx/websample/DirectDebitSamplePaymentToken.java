@@ -61,7 +61,7 @@ public class DirectDebitSamplePaymentToken extends NetBanxServletBase {
     String radio = request.getParameter("account");
     if(radio.equals("ach"))
     {
-    	OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST,"1001057430");
+    	OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST,this.accountNumber);
     	try {
     	Purchases purchases=
     			Purchases.builder()

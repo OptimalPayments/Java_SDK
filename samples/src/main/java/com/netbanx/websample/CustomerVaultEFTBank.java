@@ -61,7 +61,7 @@ public class CustomerVaultEFTBank extends NetBanxServletBase {
 	PrintWriter out = response.getWriter();
     boolean wasSuccessfull = false;
     Purchases purchasesResponse=null;
-    OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST,"1001057430");
+    OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST, this.accountNumber);
     	try {
     		
     		

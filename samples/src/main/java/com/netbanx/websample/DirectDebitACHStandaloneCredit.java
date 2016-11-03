@@ -58,7 +58,7 @@ public class DirectDebitACHStandaloneCredit extends NetBanxServletBase {
 	PrintWriter out = response.getWriter();
     boolean wasSuccessfull = false;
     StandaloneCredits standaloneCreditsResponse=null;
-    OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST,"1001057430");
+    OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST,this.accountNumber);
     	try {
     	
     		StandaloneCredits standaloneCredits=

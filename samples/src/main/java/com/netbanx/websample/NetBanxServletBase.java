@@ -51,15 +51,15 @@ public abstract class NetBanxServletBase extends HttpServlet {
       InputStream resourceStream = loader.getResourceAsStream("config.properties");
       props.load(resourceStream);
 
-      apiKey = props.getProperty("optimalApiKeyId");
-      apiPassword = props.getProperty("optimalApiKeySecret");
-      accountNumber = props.getProperty("optimalAccountNumber");
+      apiKey = props.getProperty("apiKey");
+      apiPassword = props.getProperty("apiPassword");
+      accountNumber = props.getProperty("accountNumber");
       currencyCode = props.getProperty("currencyCode");
       currencyMultiplier = props.getProperty("currencyBaseUnitsMultiplier");
 
-      logger.log(Level.INFO, "optimalApiKeyId [{0}]", apiKey);
-      logger.log(Level.INFO, "optimalApiKeySecret [{0}]", apiPassword);
-      logger.log(Level.INFO, "optimalAccountNumber [{0}]", accountNumber);
+      logger.log(Level.INFO, "apiKey [{0}]", apiKey);
+      logger.log(Level.INFO, "apiPassword [{0}]", apiPassword);
+      logger.log(Level.INFO, "accountNumber [{0}]", accountNumber);
       logger.log(Level.INFO, "currencyCode [{0}]", currencyCode);
       logger.log(Level.INFO, "currencyBaseUnitsMultiplier [{0}]", currencyMultiplier);
 

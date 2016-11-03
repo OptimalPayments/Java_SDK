@@ -64,7 +64,7 @@ public class CustomerVaultMandates extends NetBanxServletBase {
     String radio = request.getParameter("account");
     if(radio.equals("sepa"))
     {
-    	  OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST,"1001057620");
+    	  OptimalApiClient apiClient = new OptimalApiClient(this.apiKey, this.apiPassword, Environment.TEST, this.accountNumber);
       	try {
       		
       		out.println("sepa selected");
